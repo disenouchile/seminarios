@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Diseño — UCH — Sesión de Póster Académico</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+        <style>
+            body {
+                font-family: "IBM Plex Sans", sans-serif;
+                color: #081626;
+                background: #f7f7f7;
+            }
+
+            @media (min-width: 799px) {
+                .container {
+                    max-width: 800px;
+                    box-shadow: 0 0 4px #ddd;
+                }
+            }
+            em {
+                font-weight: bold;
+                font-style: normal;
+            }
+
+            header > h1 {
+                color: #102b4a;
+                font-size: calc(2.75rem + 2.75vw);
+                line-height: 1;
+                font-weight: 900;
+                margin: 2rem -0.2rem;
+                text-decoration: underline;
+            }
+
+            header > h2 {
+                color: #102b4a;
+                font-size: 1.8rem;
+            }
+
+            header > address {
+                color: #102b4a;
+                letter-spacing: 0.145rem;
+                font-size: 1.55rem;
+            }
+
+            header > h3 > em{
+                font-weight: 500;
+            }
+
+            h5 {
+                font-weight: bold;
+            }
+
+            h5 span {
+                font-size: 80%;
+            }
+
+            dd > a {
+                font-weight: bold;
+            }
+
+            div#participantes {
+                margin: 0 -1rem;
+            }
+
+            img#escudo {
+                width: calc(15vh + 4vw);
+                margin: 2vh 0 10vh 0;
+            }
+
+            .card {
+                border-radius: 0;
+                border:none;
+                box-shadow: 0 0 3px #ddd;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="container my-3 bg-white">
+            <div class="row">
+                <div class="col-11 mx-auto">
+                    <header class="mt-5">
+                        <h2>9, 10 y 11 de diciembre, 2024</h2>
+                        
+                        <address class="mb-4"><em>HALL CENTRAL</em> — <em>FAU</em> — <em>UCH</em></address>
+
+                        <h1>Sesión de póster académico</h1>
+
+                        <h2>Resultados del seminario de investigación para optar al grado académico de <em>Licenciado/a en Diseño de la Universidad de Chile</em>.</h2>
+
+                        <img src="escudo.jpg" id="escudo">
+
+                    </header>
+                    <main>
+                        <h3>Participan <span>*</span></h3>
+
+                        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-2" id="participantes"></div>
+
+                        <p class="mt-3 small">* Los/as participantes se organizarán en grupos temáticos. Los grupos se presentarán durante la mañana (10.00 a 12.30 hrs.) o la tarde (15.00 a 17.30 hrs.) de los días lunes 9, martes 10 o miércoles 11 de diciembre. El momento en que se presenten dependerá de la disponibilidad de cada Profesor/a involucrado/a en la calificación de la instancia.
+                        </p>
+                    </main>
+                    <footer class="my-5">
+                        <dl>
+                            <dt class="fs-5">Invitan</dt>
+                            <dd>
+                                <a href="" title="Departamento de Diseño" target="_blank" class="link-dark">DdD</a> — FAU — Universidad de Chile<br />
+                                <a href="https://fau.uchile.cl/investigacion" title="Dirección de Investigación y Creación" target="_blank" class="link-dark">DIC</a> — FAU — Universidad de Chile
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt class="fs-5">Organizan</dt>
+                            <dd>
+                                <a href="https://fau.uchile.cl/carreras/4929/diseno" target="_blank" class="link-dark">Carrera de Diseño</a> — Escuela de Pregrado — FAU — Universidad de Chile<br />
+                                <a href="https://fau.uchile.cl/extension" title="Dirección de Extensión y Vinculación con el Medio" target="_blank" class="link-dark">DEXVM</a> — FAU — Universidad de Chile
+                            </dd>
+                        </dl>
+                    </footer>
+                </div>
+            </div>
+        </div>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"
+            integrity="sha512-dfX5uYVXzyU8+KHqj8bjo7UkOdg18PaOtpa48djpNbZHwExddghZ+ZmzWT06R5v6NSk3ZUfsH6FNEDepLx9hPQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+
+        <script>
+            const centena = document.querySelector("#participantes");
+
+            Papa.parse("https://raw.githubusercontent.com/disenouchile/seminarios/refs/heads/main/participan.csv", {
+                download: true,
+                header: true,
+                complete: function (results) {
+                    console.log(results);
+                    results.data.forEach((d) => {
+                        centena.innerHTML += `
+                            <div class="col">
+                              <div class="card">
+                                <div class="card-body small">
+                                  <h6>${d.nombres_seminarista[0]}. ${d.apellidos_seminarista}</h6>
+                                  <p class="fst-italic">${d.nombre_investigacion}</p>
+                                  <small>${d.prof_guia}</small>
+                                </div>
+                              </div>
+                            </div>`;
+                    });
+                },
+            });
+        </script>
+    </body>
+</html>
