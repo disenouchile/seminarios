@@ -13,6 +13,7 @@
                 font-family: "IBM Plex Sans", sans-serif;
                 color: #081626;
                 background: #f7f7f7;
+                padding:1rem;
             }
 
             @media (min-width: 799px) {
@@ -28,33 +29,38 @@
 
             header > h1 {
                 color: #102b4a;
-                font-size: calc(2.75rem + 2.75vw);
                 line-height: 1;
                 font-weight: 900;
                 margin: 2rem -0.2rem;
                 text-decoration: underline;
+                font-size:10vw;
             }
+
+            @media (orientation:landscape) {
+                header > h1 {
+                    font-size:calc(1rem + 5vw);
+                }
+            }
+
 
             header > h2 {
                 color: #102b4a;
-                font-size: 1.8rem;
             }
 
             header > address {
                 color: #102b4a;
-                letter-spacing: 0.145rem;
-                font-size: 1.55rem;
+                letter-spacing: 0.175vw;
             }
 
             header > h3 > em{
                 font-weight: 500;
             }
 
-            h5 {
+            h3 {
                 font-weight: bold;
             }
 
-            h5 span {
+            h3 span {
                 font-size: 80%;
             }
 
@@ -80,13 +86,13 @@
         </style>
     </head>
     <body>
-        <div class="container my-3 bg-white">
+        <div class="container bg-white">
             <div class="row">
                 <div class="col-11 mx-auto">
                     <header class="mt-5">
-                        <h2>9, 10 y 11 de diciembre, 2024</h2>
+                        <h2 class="fs-4">9, 10 y 11 de diciembre, 2024</h2>
                         
-                        <address class="mb-4"><em>HALL CENTRAL</em> — <em>FAU</em> — <em>UCH</em></address>
+                        <address class="fs-5 mb-4"><em>HALL CENTRAL</em> — <em>FAU</em> — <em>UCH</em></address>
 
                         <h1>Sesión de póster académico</h1>
 
@@ -100,22 +106,28 @@
 
                         <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-2" id="participantes"></div>
 
-                        <p class="mt-3 small">* Los/as participantes se organizarán en grupos temáticos. Los grupos se presentarán durante la mañana (10.00 a 12.30 hrs.) o la tarde (15.00 a 17.30 hrs.) de los días lunes 9, martes 10 o miércoles 11 de diciembre. El momento en que se presenten dependerá de la disponibilidad de cada Profesor/a involucrado/a en la calificación de la instancia.
+                        <p class="mt-4 small">* Los/as participantes se organizarán en grupos temáticos. Los grupos se presentarán durante la mañana (10.00 a 12.30 hrs.) o la tarde (15.00 a 17.30 hrs.) de los días lunes 9, martes 10 o miércoles 11 de diciembre. El momento en que se presenten dependerá de la disponibilidad de cada Profesor/a involucrado/a en la calificación de la instancia.
                         </p>
                     </main>
                     <footer class="my-5">
                         <dl>
-                            <dt class="fs-5">Invitan</dt>
+                            <dt class="fs-4">Invitan</dt>
                             <dd>
-                                <a href="" title="Departamento de Diseño" target="_blank" class="link-dark">DdD</a> — FAU — Universidad de Chile<br />
+                                <a href="https://fau.uchile.cl/diseno" title="Departamento de Diseño" target="_blank" class="link-dark">DdD</a> — FAU — Universidad de Chile<br />
                                 <a href="https://fau.uchile.cl/investigacion" title="Dirección de Investigación y Creación" target="_blank" class="link-dark">DIC</a> — FAU — Universidad de Chile
                             </dd>
                         </dl>
                         <dl>
-                            <dt class="fs-5">Organizan</dt>
+                            <dt class="fs-4">Organizan</dt>
                             <dd>
                                 <a href="https://fau.uchile.cl/carreras/4929/diseno" target="_blank" class="link-dark">Carrera de Diseño</a> — Escuela de Pregrado — FAU — Universidad de Chile<br />
                                 <a href="https://fau.uchile.cl/extension" title="Dirección de Extensión y Vinculación con el Medio" target="_blank" class="link-dark">DEXVM</a> — FAU — Universidad de Chile
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt class="fs-4">Colabora</dt>
+                            <dd>
+                                <a href="https://www.redis.cl/" target="_blank" class="link-dark">ReDis</a> — Red de Escuelas de Diseño — Consejo de Rectores de las Universidades de Chilenas 
                             </dd>
                         </dl>
                     </footer>
@@ -140,10 +152,12 @@
                     results.data.forEach((d) => {
                         centena.innerHTML += `
                             <div class="col">
-                              <div class="card">
+                              <div class="card h-100">
                                 <div class="card-body small">
                                   <h6>${d.nombres_seminarista[0]}. ${d.apellidos_seminarista}</h6>
                                   <p class="fst-italic">${d.nombre_investigacion}</p>
+                                  </div>
+                                  <div class="card-footer small bg-white border-0">
                                   <small>${d.prof_guia}</small>
                                 </div>
                               </div>
