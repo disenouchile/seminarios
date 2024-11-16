@@ -176,12 +176,15 @@
                     results.data.forEach((d) => {
                         centena.innerHTML += `
                             <div class="col grupo${d.grupo}">
-                              <div class="card h-100">
-                                <div class="card-body small">
-                                  <h6>${d.nombres_seminarista[0]}. ${d.apellidos_seminarista}</h6>
+                              <div class="card h-100 small">
+                                <div class="card-header bg-white border-0 mt-1">
+                                    <h6>${d.nombres_seminarista[0]}. ${d.apellidos_seminarista}</h6>
+                                </div>
+                                <div class="card-body my-0 py-0">
+                                  
                                   <p class="fst-italic m-0">${d.nombre_investigacion}</p>
                                   </div>
-                                  <div class="card-footer small bg-white border-0">
+                                  <div class="card-footer bg-white border-0">
                                   <small><em>Grupo ${d.grupo}</em><br/> 
                                   ${d.prof_guia}</small>
                                 </div>
