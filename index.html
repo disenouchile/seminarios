@@ -86,12 +86,23 @@
 
             select {
                 margin-right: -0.8rem;
-                width: auto;
             }
 
             select.form-select {
                 width: auto;
             }
+
+            @media (orientation: portrait){
+                select {
+                    margin-left: -0.8rem;
+                    text-indent: 0.35rem;
+                }                
+                select.form-select {
+                    width: calc(100% + 1.6rem);
+                }
+           }
+
+
 
             img#escudo {
                 width: calc(10vh + 5.5vw);
@@ -140,7 +151,7 @@
 
                         <h2>Resultados del seminario de investigación para optar al grado académico de <em>Licenciado/a en Diseño de la Universidad de Chile</em>.</h2>
 
-                        <img src="escudo-azul.svg" id="escudo" />
+                        <img src="escudo.svg" id="escudo" />
                     </header>
                     <main>
                         <div class="row g-0">
@@ -149,17 +160,17 @@
                             </div>
                             <div class="col-md-6 text-end">
                                 <select class="form-select form-select-sm ms-md-auto">
-                                    <option value="todos">Ver todos los resultados</option>
-                                    <option value="grupo1">Ver resultados en Grupo 1</option>
-                                    <option value="grupo2">Ver resultados en Grupo 2</option>
-                                    <option value="grupo3">Ver resultados en Grupo 3</option>
-                                    <option value="grupo4">Ver resultados en Grupo 4</option>
-                                    <option value="grupo5">Ver resultados en Grupo 5</option>
-                                    <option value="grupo6">Ver resultados en Grupo 6</option>
-                                    <option value="grupo7">Ver resultados en Grupo 7</option>
-                                    <option value="grupo8">Ver resultados en Grupo 8</option>
-                                    <option value="grupo9">Ver resultados en Grupo 9</option>
-                                    <option value="grupo10">Ver resultados en Grupo 10</option>
+                                    <option value="todos">Ver todas…</option>
+                                    <option value="grupo1">Ver investigaciones del grupo temático 1</option>
+                                    <option value="grupo2">Ver investigaciones del grupo temático 2</option>
+                                    <option value="grupo3">Ver investigaciones del grupo temático 3</option>
+                                    <option value="grupo4">Ver investigaciones del grupo temático 4</option>
+                                    <option value="grupo5">Ver investigaciones del grupo temático 5</option>
+                                    <option value="grupo6">Ver investigaciones del grupo temático 6</option>
+                                    <option value="grupo7">Ver investigaciones del grupo temático 7</option>
+                                    <option value="grupo8">Ver investigaciones del grupo temático 8</option>
+                                    <option value="grupo9">Ver investigaciones del grupo temático 9</option>
+                                    <option value="grupo10">Ver investigaciones del grupo temático 10</option>
                                 </select>
                             </div>
                         </div>
@@ -167,8 +178,7 @@
                         <div class="row row-cols-2 row-cols-md-3 row-cols-xxl-4 g-2" id="participantes"></div>
 
                         <p class="mt-4 small">
-                            * Los/as participantes se organizan en grupos temáticos. Los grupos se presentarán durante la mañana (10.00 a 12.30 hrs.) o la tarde (15.00 a 17.30 hrs.) de los días lunes 9, martes 10 o miércoles 11 de
-                            diciembre. El momento de cada grupo dependerá de la disponibilidad de cada Profesor/a involucrado/a.
+                            * Las investigaciones se organizan en grupos temáticos. Los grupos se presentarán durante la mañana (10.00 a 12.30 hrs.) o la tarde (15.00 a 17.30 hrs.) de los días lunes 9, martes 10 o miércoles 11 de diciembre. El momento de cada grupo dependerá de la disponibilidad de cada Profesor/a en mismo Grupo.
                         </p>
                     </main>
 
