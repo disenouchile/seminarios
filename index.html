@@ -178,7 +178,7 @@
                         <div class="row row-cols-2 row-cols-md-3 row-cols-xxl-4 g-2" id="participantes"></div>
 
                         <p class="mt-4 small">
-                            * Las investigaciones se organizan en grupos temáticos. Los grupos se presentarán durante la mañana (10.00 a 12.30 hrs.) o la tarde (15.00 a 17.30 hrs.) de los días lunes 9, martes 10 o miércoles 11 de diciembre. El momento de cada grupo dependerá de la disponibilidad de cada Profesor/a en mismo Grupo.
+                            * Las investigaciones se organizan en grupos temáticos. Los grupos se presentarán durante la mañana (10.00 a 12.30 hrs.) o la tarde (15.00 a 17.30 hrs.) de los días lunes 9, martes 10 o miércoles 11 de diciembre. El momento de cada grupo dependerá de la disponibilidad de cada Profesor/a en el mismo Grupo.
                         </p>
                     </main>
 
@@ -259,24 +259,14 @@
                                 </div>
                               </div>
                             </div>`;
-
                         seleccionables();
-
                         palabrasClave = palabrasClave + d.palabras_clave + ",";
                     });
 
                     palabrasClave = palabrasClave.split(",");
                     palabrasClave = palabrasClave.map((e) => e.trim());
                     palabrasClave = palabrasClave.filter((e) => e);
-                    palabrasClave = palabrasClave
-                        .reduce(
-                            (a, b) => {
-                                b.toUpperCase() === b ? a[0].push(b) : a[1].push(b);
-                                return a;
-                            },
-                            [[], []]
-                        )
-                        .flatMap((e) => e.sort((a, b) => a.localeCompare(b)));
+                    palabrasClave = palabrasClave.reduce((a, b) => {b.toUpperCase() === b ? a[0].push(b) : a[1].push(b); return a;},[[], []]).flatMap((e) => e.sort((a, b) => a.localeCompare(b)));
                     palabrasClave = [...new Set(palabrasClave)];
                     console.log(palabrasClave);
 
@@ -289,9 +279,6 @@
                     });
                 },
             });
-
-
-
             function seleccionables() {
                 seleccion.addEventListener("change", (e) => {
                     document.querySelectorAll(".col").forEach((t) => t.classList.add("d-none"));
