@@ -161,16 +161,12 @@
                             <div class="col-md-6 text-end">
                                 <select class="form-select form-select-sm ms-md-auto">
                                     <option value="todos">Ver todas…</option>
-                                    <option value="grupo1">Ver investigaciones del grupo temático 1</option>
-                                    <option value="grupo2">Ver investigaciones del grupo temático 2</option>
-                                    <option value="grupo3">Ver investigaciones del grupo temático 3</option>
-                                    <option value="grupo4">Ver investigaciones del grupo temático 4</option>
-                                    <option value="grupo5">Ver investigaciones del grupo temático 5</option>
-                                    <option value="grupo6">Ver investigaciones del grupo temático 6</option>
-                                    <option value="grupo7">Ver investigaciones del grupo temático 7</option>
-                                    <option value="grupo8">Ver investigaciones del grupo temático 8</option>
-                                    <option value="grupo9">Ver investigaciones del grupo temático 9</option>
-                                    <option value="grupo10">Ver investigaciones del grupo temático 10</option>
+                                    <option value="jornada1">LUNES AM</option>
+                                    <option value="jornada2">LUNES PM</option>
+                                    <option value="jornada3">MARTES AM</option>
+                                    <option value="jornada4">MARTES PM</option>
+                                    <option value="jornada5">MIÉRCOLES AM</option>
+                                    <option value="jornada6">MIÉRCOLES PM</option>
                                 </select>
                             </div>
                         </div>
@@ -240,7 +236,7 @@
                     console.log(results);
                     results.data.forEach((d, i) => {
                         centena.innerHTML += `
-                            <div class="col grupo${d.grupo}">
+                            <div class="col jornada${d.jornada}">
                               <div class="card h-100 small">
                                 <div class="card-header bg-white border-0 mt-1">
                                     <em>${d.nombres_seminarista[0]}. ${d.apellidos_seminarista}</em>
@@ -254,7 +250,7 @@
                                   </div>
                                   </div>
                                   <div class="card-footer bg-white border-0">
-                                  <small><em>Grupo ${d.grupo}</em><br/> 
+                                  <small><em>${d.jornada_txt}</em><br/> 
                                   ${d.prof_guia}</small>
                                 </div>
                               </div>
