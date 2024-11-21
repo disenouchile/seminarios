@@ -172,6 +172,10 @@
                         </div>
 
                         <div class="row row-cols-2 row-cols-md-3 row-cols-xxl-4 g-2" id="participantes"></div>
+
+                        <div id="comisiones" class="m-0 py-3 small text-body-secondary"></div>
+
+
                     </main>
 
                     <aside class="my-5 small text-body-secondary"><em>Palabras clave en las investigaciones participantes:</em> <span id="keywords" class="small fst-italic p-1"></span></aside>
@@ -252,6 +256,7 @@
                               </div>
                             </div>`;
                         seleccionables();
+                        comisiones();
                         palabrasClave = palabrasClave + d.palabras_clave + ",";
                     });
 
@@ -282,7 +287,27 @@
                     }
                 });
             }
+
             function comisiones(){
+                seleccion.addEventListener("change", (e) => {
+                    document.querySelector("#comisiones").innerHTML = "";
+                    valor = e.target.value;
+                    if (valor == "jornada1") {
+                        document.querySelector("#comisiones").innerHTML = "<small><em>*PROFESORES EN COMISIONES DE LUNES AM</em>: Patricio Bascuñán, Eduardo Castillo, Felipe Cortez, Pablo Domínguez, Sergio Donoso, Félix Maldonado, Astrid Osorio, Rebeca Silva, Hans Stange y Mitzi Vielma.</small>";
+                    } else if (valor == "jornada2") {
+                        document.querySelector("#comisiones").innerHTML = "<small><em>*PROFESORES EN COMISIONES DE LUNES PM</em>: Claudio Cortés, Felipe Cortez, Pamela Gatica, Cristian Gómez, Andrea Meza, Daniel Reyes, Hans Stange, Osvlado Zorzano, Rodrigo Vera y Mauricio Vico.</small>";
+                    } else if (valor == "jornada3") {
+                        document.querySelector("#comisiones").innerHTML = "<small><em>*PROFESORES EN COMISIONES DE MARTES AM</em>: Pablo Domínguez, Sergio Donoso, Rubén Jacob, Antonio Marín, René Perea, Mauricio Tapia y Osvaldo Zorzano.</small>";
+                    } else if (valor == "jornada4") {
+                        document.querySelector("#comisiones").innerHTML = "<small><em>*PROFESORES EN COMISIONES DE MARTES PM</em>: Eduardo Castillo, Claudio Cortés, Sergio Donoso, Pablo Domínguez, Daniel Ferrera, Antonio Marín, Leonardo Soto y Andrea Wechsler.</small>";
+                    } else if (valor == "jornada5") {
+                        document.querySelector("#comisiones").innerHTML = "<small><em>*PROFESORES EN COMISIONES DE MIÉRCOLES AM</em>: Sergio Donoso, Paola De la Sotta, Lorna Lares, Clarisa Menteguiaga, Pablo Núñez, Andrea Wechsler.</small>";
+                    } else if (valor == "jornada6") {
+                        document.querySelector("#comisiones").innerHTML = "<small><em>*PROFESORES EN COMISIONES DE MIÉRCOLES PM</em>: Claudio Cortés, Eduardo Castillo, Andrea Meza, Roberto Osses, Leonardo Soto, Hans Stange, Mauricio Vico. </small>";
+                    } else {
+                        document.querySelector("#comisiones").innerHTML = "";
+                    }
+                });
 
             }
         </script>
