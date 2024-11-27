@@ -80,8 +80,6 @@
                 font-weight: bold;
             }
 
-       
-
             select.form-select {
                 width: auto;
             }
@@ -104,17 +102,34 @@
             aside > em {
                 color: #081626;
             }
-            span.contador{
+            span.contador {
                 box-shadow: inset 0 0 3px #ccc;
-                background:#eee;
-                min-width:1.1rem;
-                padding:0.1rem 0.2rem;
+                background: #eee;
+                min-width: 1.1rem;
+                padding: 0.1rem 0.2rem;
                 text-align: center;
-                display:inline-block;
-                font-size:0.6rem;
-                margin-bottom:0.5rem;
-                margin-left:-0.1rem;
-                color:#aaa;
+                display: inline-block;
+                font-size: 0.6rem;
+                margin-bottom: 0.5rem;
+                margin-left: -0.1rem;
+                color: #aaa;
+            }
+
+            div#perfil > div.card {
+                padding: 0.6rem 0.9rem 0.3rem 0.6rem;
+            }
+
+            div#perfil > div.card > p > em {
+                font-weight: 400;
+                font-style: italic !important;
+                text-decoration: underline;
+            }
+
+            #central{
+                background:#fafafa url("hall-central-ampliado.jpg") no-repeat center bottom;
+                background-size:100% auto;
+                padding-bottom:5vh;
+                box-shadow: 0 0 4px #ddd;
             }
         </style>
     </head>
@@ -127,7 +142,7 @@
             </symbol>
         </svg>
 
-        <div class="container" style="background: #fafafa; box-shadow: 0 0 4px #ddd;">
+        <div class="container" id="central">
             <div class="row">
                 <div class="col-11 mx-auto">
                     <header class="mt-4 pt-3">
@@ -143,10 +158,10 @@
 
                         <h1>Sesión de póster académico</h1>
 
-                        <h4>Comisiones por Profesor/a</h4>
+                        <h4 id="alternativas">Comisiones por Profesor/a</h4>
                     </header>
                     <main>
-                        <select class="form-select form-select-sm ms-md-auto w-100 mb-3 " id="profe">
+                        <select class="form-select form-select-sm ms-md-auto w-100 mb-2" id="profe">
                             <option selected>Seleccione…</option>
                             <option value="P. Bascuñan">Patricio Bascuñan</option>
                             <option value="E. Castillo">Eduardo Castillo</option>
@@ -156,9 +171,9 @@
                             <option value="P. de la Sotta">Paola de la Sotta</option>
                             <option value="P. Domínguez">Pablo Domínguez</option>
                             <option value="S. Donoso">Sergio Donoso</option>
-                            <option value="D. Ferrera">Daniel Ferrera</option>
                             <option value="P. Gatica">Pamela Gatica</option>
                             <option value="C. Gómez">Cristian Gómez</option>
+                            <option value="R. Jacob">Rubén Jacob</option>
                             <option value="L. Lares">Lorna Lares</option>
                             <option value="F. Maldonado">Félix Maldonado</option>
                             <option value="A. Marín">José Antonio Marín</option>
@@ -184,8 +199,8 @@
                             <option value="O. Zorzano">Osvaldo Zorzano</option>
                         </select>
 
+                        <div id="perfil"></div>
                         <div class="row row-cols-2 row-cols-md-3 row-cols-xxl-4 g-2" id="participantes"></div>
-
                     </main>
 
                     <footer class="my-5"></footer>
@@ -213,22 +228,61 @@
         ></script>
 
         <script>
-                    const centena = document.querySelector("#participantes");
-                    const profe = document.querySelector("#profe");
-                    const donde = document.querySelector("#keywords");
-                    var palabrasClave = "";
+            const centena = document.querySelector("#participantes");
+            const profe = document.querySelector("#profe");
+            const perfil = document.querySelector("#perfil");
+            const donde = document.querySelector("#keywords");
+            var palabrasClave = "";
+            const calificadores = [
+                '<p>Académico adscrito a la Escuela de Pregrado. Sus temas son: Historia del diseño, Cultura gráfica, Estudios visuales, Estudios Latinoamericanos, Diseño Editorial.</p> <p>Atendiendo al quehacer en investigación y creación de la Facultad de Arquitectura y Urbanismo, se relaciona con el área prioritaria de <em>Culturas visuales, materiales-inmateriales y mediales</em></p><p class="mb-0">Y atendiendo a las Líneas de Investigación del Departamento de Diseño, se relaciona con: <em>Identidad y Patrimonio</em>, <em>Estudios Visuales y Mediales</em>, <em>Diseño Editorial y Tipografía</em>.</p>',
+                '<p>Académico adscrito al Departamento de Diseño. Sus temas son: Historia del Diseño, Cultura Visual, Cultural Material, Patrimonio.</p> <p>Atendiendo al quehacer en investigación y creación de la Facultad de Arquitectura y Urbanismo, se relaciona con las áreas prioritarias de <em>Culturas visuales, materiales-inmateriales y mediales</em>, y <em>Fenómenos sensibles, perceptuales y corporales en el entorno</em></p><p class="mb-0">Y atendiendo a las Líneas de Investigación del Departamento de Diseño, se relaciona con: <em>Estudios Visuales y Mediales</em>, <em>Diseño Editorial y Tipografía</em>.</p>',
+                '<p>Académica adscrita al Departamento de Diseño. Sus temas son: Diseño y patrimonio, Técnicas artesanales tradicionales y contemporáneas, Investigación-acción participativa para el diseño.</p> <p>Atendiendo al quehacer en investigación y creación de la Facultad de Arquitectura y Urbanismo, se relaciona con el área prioritaria de <em>Culturas visuales, materiales-inmateriales y mediales</em>.</p><p class="mb-0">Y atendiendo a las Líneas de Investigación del Departamento de Diseño, se relaciona con: <em> Materiales, Tecnologías y Procesos </em>, <em> Identidad y Patrimonio</em>.</p>',
+                '<p>Académico adscrito al Departamento de Diseño. Sus temas son: Imagenología y visualidad en diseño, semiótica y estética de la imagen en diseño, investigación de la imagen en diseño.</p><p>Atendiendo al quehacer en investigación y creación de la Facultad de Arquitectura y Urbanismo, se relaciona con el área prioritarias de <em>Culturas visuales, materiales-inmateriales y mediales</em>.</p><p class="mb-0">Y atendiendo a las Líneas de Investigación del Departamento de Diseño, se relaciona con: <em>Morfología, Percepción y Color</em>, <em>Estudios Visuales y Mediales</em>.</p>',
+                '<p>Académico adscrito a la Escuela de Pregrado. Guía investigaciones cualitativas con marcos narrativos y/o fenomenológicos, puestas en relación con la ciencia de la imagen (<i>Bildwissenschaft</i>) y aplicadas al diseño de comunicación visual informativa.</p><p>Atendiendo al quehacer en investigación y creación de la Facultad de Arquitectura y Urbanismo, se relaciona con las áreas prioritarias de <em>Culturas visuales, materiales-inmateriales y mediales</em>, y <em>Fenómenos sensibles, perceptuales y corporales en el entorno</em>.</p><p class="mb-0">Y atendiendo a las Líneas de Investigación del Departamento de Diseño, se relaciona con: <em>Morfología, Percepción y Color</em>, <em>Estudios Visuales y Mediales</em>.</p>',
+                '<p>Académica adscrita al Departamento de Diseño. Dedicada al rescate patrimonial con diseño participativo y social, vinculado a diversas comunidades del país.</p><p>Atendiendo al quehacer en investigación y creación de la Facultad de Arquitectura y Urbanismo, se relaciona con las áreas prioritarias de <em>Dinámicas y transformaciones morfológicas, urbanas y rurales</em>, <em>Creación, innovación proyectual y desarrollos tecnológicos</em>, <em>Conservación e intervención de obras, entornos y ciudades patrimoniales</em>, <em>Fenómenos sensibles, perceptuales y corporales en el entorno</em>.</p><p class="mb-0">Y atendiendo a las Líneas de Investigación del Departamento de Diseño, se relaciona con: <em>Identidad y Patrimonio</em>.</p>',
+                '<p>Académico adscrito al Departamento de Diseño. Dedicado al trabajo multidisciplinario y transdisciplinario (diseño - medicina), con materiales compuestos, incluyendo biomateriales.</p><p>Atendiendo al quehacer en investigación y creación de la Facultad de Arquitectura y Urbanismo, se relaciona con las áreas prioritarias de <em>Sistemas físicos, naturales y cambios ambientales</em>, <em>Creación, innovación proyectual y desarrollos tecnológicos</em>.</p><p class="mb-0">Y atendiendo a las Líneas de Investigación del Departamento de Diseño, se relaciona con: <em>Diseño centrado en la persona</em>, <em>Materiales, Tecnologías y Procesos</em>.</p>',
+                '<p>Académico adscrito al Departamento de Diseño. Especialista en estudio de las emociones, creatividad, servicios y gamificación, utilizando biometría de la percepción para el desarrollo de productos. Diseño estratégico, prospectivo, futurológico y especulativo para el desarrollo de proyectos cualitativos de innovación y transferencia con la industria.</p><p>Atendiendo al quehacer en investigación y creación de la Facultad de Arquitectura y Urbanismo, se relaciona con las áreas prioritarias de <em>Dimensiones socioecológicas en el territorio</em>, <em>Creación, innovación proyectual y desarrollos tecnológicos</em>, <em>Fenómenos sensibles, perceptuales y corporales en el entorno</em>.</p><p class="mb-0">Y atendiendo a las Líneas de Investigación del Departamento de Diseño, se relaciona con: <em>Diseño centrado en la persona</em>, <em>Identidad y Patrimonio</em>.</p>',
+                '<p>Académica adscrita al Departamento de Diseño. Aborda el diseño en visualidad y medios, desde perspectivas feministas, interseccionales, afectivas.</p><p>Atendiendo al quehacer en investigación y creación de la Facultad de Arquitectura y Urbanismo, se relaciona con las áreas prioritarias de <em>Creación, innovación proyectual y desarrollos tecnológicos</em>, <em>Culturas visuales, materiales-inmateriales y mediales</em>, <em>Fenómenos sensibles, perceptuales y corporales en el entorno</em>.</p><p class="mb-0">Y atendiendo a las Líneas de Investigación del Departamento de Diseño, se relaciona con: <em>Diseño centrado en la persona</em>, <em>Estudios Visuales y Mediales</em>.</p>',
+                '<p>Académico adscrito al Departamento de Diseño. Centrado en la relación entre la visualidad, los documentos de arte y las cuestiones de autoría, destacándose por su perspectiva crítica y su participación en proyectos que exploran las políticas de la imagen y los derechos humanos.</p><p>Atendiendo al quehacer en investigación y creación de la Facultad de Arquitectura y Urbanismo, se relaciona con las áreas prioritarias de <em>Creación, innovación proyectual y desarrollos tecnológicos</em>, <em>Culturas visuales, materiales-inmateriales y mediales</em>.</p><p class="mb-0">Y atendiendo a las Líneas de Investigación del Departamento de Diseño, se relaciona con: <em>Estudios Visuales y Mediales</em>.</p>',
+                '<p>Académico adscrito al Departamento de Diseño. Pone al diseño de productos y servicios en relación directa con las emociones, la percepción y afectividad como aspectos diferenciadores, promotores del bienestar y capaces de potenciar el valor de la disciplinar del diseño para el ser humano y su florecimiento.</p><p>Atendiendo al quehacer en investigación y creación de la Facultad de Arquitectura y Urbanismo, se relaciona con las áreas prioritarias de <em>Creación, innovación proyectual y desarrollos tecnológicos</em>, <em>Fenómenos sensibles, perceptuales y corporales en el entorno</em>.</p><p class="mb-0">Y atendiendo a las Líneas de Investigación del Departamento de Diseño, se relaciona con: <em>Diseño centrado en la persona</em>.</p>',
+                '<p>Académica adscrita al Departamento de Diseño. Sus temas son el diseño regenerativo, la sustentabilidad y la economía circular. Centrada en la relación humano/no-humano para hacernos preguntas –desde el pensamiento de diseño– sobre el mundo que queremos co-habitar, para proyectar procesos, sistema, materiales y/o objetivos que regeneren ecosistemas.</p><p>Atendiendo al quehacer en investigación y creación de la Facultad de Arquitectura y Urbanismo, se relaciona con las áreas prioritarias de <em>Sistemas físicos, naturales y cambios ambientales</em>, <em>Dimensiones socioecológicas en el territorio</em>, <em>Creación, innovación proyectual y desarrollos tecnológicos</em>.</p><p class="mb-0">Y atendiendo a las Líneas de Investigación del Departamento de Diseño, se relaciona con: <em>Diseño centrado en la persona</em>, <em>Materiales, Tecnologías y Procesos</em>, <em>Identidad y Patrimonio</em>.</p>',
+                '<p>Académico adscrito a la Escuela de Pregrado. Especialista en tendencias de innovación tecnológica que utilizan variables de ciencia, ingeniería y diseño industrial.</p><p>Atendiendo al quehacer en investigación y creación de la Facultad de Arquitectura y Urbanismo, se relaciona con el área prioritaria de <em>Creación, innovación proyectual y desarrollos tecnológicos</em>.</p><p class="mb-0">Y atendiendo a las Líneas de Investigación del Departamento de Diseño, se relaciona con: <em>Materiales, Tecnologías y Procesos</em>.</p>',
+                '<p>Académico adscrito a la Escuela de Pregrado. Enfocado en energías renovables, microrredes y tecnologías aplicadas al desarrollo sostenible, relacionadas con el ser humano y sus prácticas culturales en el sur global.</p><p>Atendiendo al quehacer en investigación y creación de la Facultad de Arquitectura y Urbanismo, se relaciona con las áreas prioritarias de <em>Sistemas físicos, naturales y cambios ambientales</em>, <em>Creación, innovación proyectual y desarrollos tecnológicos</em>.</p><p class="mb-0">Y atendiendo a las Líneas de Investigación del Departamento de Diseño, se relaciona con: <em>Diseño centrado en la persona</em>, <em>Materiales, Tecnologías y Procesos</em>, <em>Morfología, Percepción y Color</em>, <em>Identidad y Patrimonio</em>.</p>',
+                '<p>Académico adscrito a la Escuela de Pregrado. Dedicada al diseño de sistemas gráfico-objetuales. Interesada en el diseño crítico, sustentable y consciente que pone en relación al cuerpo humano con el entorno. Explora también las relaciones entre arte y diseño.</p><p>Atendiendo al quehacer en investigación y creación de la Facultad de Arquitectura y Urbanismo, se relaciona con las áreas prioritarias de <em>Sistemas físicos, naturales y cambios ambientales</em>, <em>Dimensiones socioecológicas en el territorio</em>.</p><p class="mb-0">Y atendiendo a las Líneas de Investigación del Departamento de Diseño, se relaciona con: <em>Diseño centrado en la persona</em>, <em>Materiales, Tecnologías y Procesos</em>, <em>Estudios Visuales y Mediales</em>, <em>Diseño Editorial y Tipografía</em>.</p>',
+                '<p>Académica adscrita a la Escuela de Pregrado. Dedicada a los estudios de la cultura visual y material, estudios de la imagen, estudios del libro y las publicaciones experimentales con énfasis en el análisis de las relaciones entre texto e imagen que permiten trabajos interdisciplinarios que cruzan arte, diseño, historia y literatura, con la incorporación de las epistemologías feministas y estudios género en el ámbito de la investigación y creación.</p><p>Atendiendo al quehacer en investigación y creación de la Facultad de Arquitectura y Urbanismo, se relaciona con las áreas prioritarias de <em>Culturas visuales, materiales-inmateriales y mediales</em>, <em>Fenómenos sensibles, perceptuales y corporales en el entorno</em>.</p><p class="mb-0">Y atendiendo a las Líneas de Investigación del Departamento de Diseño, se relaciona con: <em>Identidad y Patrimonio</em>, <em>Estudios Visuales y Mediales</em>, <em>Diseño Editorial y Tipografía</em>.</p>',
+                '<p>Docente invitado. Sus temas son las nuevas tecnologías y medios para la creación visual con enfoque crítico de comunicación, cultura y arte, desde una perspectiva latinoamericana.</p><p>Atendiendo al quehacer en investigación y creación de la Facultad de Arquitectura y Urbanismo, se relaciona con las áreas prioritarias de <em>Culturas visuales, materiales-inmateriales y mediales</em>.</p><p class="mb-0">Y atendiendo a las Líneas de Investigación del Departamento de Diseño, se relaciona con: <em>Materiales, Tecnologías y Procesos</em>, <em>Identidad y Patrimonio</em>, <em>Estudios Visuales y Mediales</em>.</p>',
+                '<p>Académico adscrito al Departamento de Diseño. Su tema son los textos textiles: Indaga en las posibles narrativas que se pueden describir, relacionar e interpretar sobre el cuerpo, el textil y la indumentaria con un determinado contexto socio-político y cultural.</p><p>Atendiendo al quehacer en investigación y creación de la Facultad de Arquitectura y Urbanismo, se relaciona con las áreas prioritarias de <em>Fenómenos sensibles, perceptuales y corporales en el entorno</em>.</p><p class="mb-0">Y atendiendo a las Líneas de Investigación del Departamento de Diseño, se relaciona con: <em>Diseño centrado en la persona</em>, <em>Materiales, Tecnologías y Procesos</em>, <em>Morfología, Percepción y Color</em>, <em>Identidad y Patrimonio</em>.</p>',
+                '<p>Académica adscrita a la Escuela de Pregrado. Trabaja con materiales, tecnologías y procesos para el estudio, la investigación y la difusión de la morfología dentro del campo del diseño.</p><p>Atendiendo al quehacer en investigación y creación de la Facultad de Arquitectura y Urbanismo, se relaciona con las áreas prioritarias de <em>Creación, innovación proyectual y desarrollos tecnológicos</em>, <em>Culturas visuales, materiales-inmateriales y mediales</em>.</p><p class="mb-0">Y atendiendo a las Líneas de Investigación del Departamento de Diseño, se relaciona con: <em>Materiales, Tecnologías y Procesos</em>, <em>Morfología, Percepción y Color</em>, <em>Estudios Visuales y Mediales</em>.</p>',
+                '<p>Académico adscrito al Departamento de Diseño. Dedicado a las investigaciones en torno a las materialidades del libro, diseño editorial y tipografía, desde una perspectiva científica y/o humanística y con foco multidisciplinar, flexible, amplio y diverso.</p><p>Atendiendo al quehacer en investigación y creación de la Facultad de Arquitectura y Urbanismo, se relaciona con las áreas prioritarias de <em>Creación, innovación proyectual y desarrollos tecnológicos</em>, <em>Conservación e intervención de obras, entornos y ciudades patrimoniales</em>, <em>Culturas visuales, materiales-inmateriales y mediales</em>, <em>Fenómenos sensibles, perceptuales y corporales en el entorno</em>.</p><p class="mb-0">Y atendiendo a las Líneas de Investigación del Departamento de Diseño, se relaciona con: <em>Identidad y Patrimonio</em>, <em>Estudios Visuales y Mediales</em>, <em>Diseño Editorial y Tipografía</em>.</p>',
+                '<p>Académico adscrito al Departamento de Diseño. Dedicado al diseño industrial, fabricación digital avanzada y materiales experimentales. Su enfoque incluye el diseño de experiencia y el desarrollo de prototipos, buscando fusionar estética y funcionalidad para crear soluciones innovadoras y significativas.</p><p>Atendiendo al quehacer en investigación y creación de la Facultad de Arquitectura y Urbanismo, se relaciona con el área prioritaria de <em>Creación, innovación proyectual y desarrollos tecnológicos</em>.</p><p class="mb-0">Y atendiendo a las Líneas de Investigación del Departamento de Diseño, se relaciona con: <em>Materiales, Tecnologías y Procesos</em>, <em>Morfología, Percepción y Color</em>.</p>',
+                '<p>Docente invitado. Dedicado al análisis y la gestión de marcas locales a través de investigación, diagnósticos y soluciones aplicadas para proyectos multidisciplinarios con foco en identidades locales y tendencias culturales. Esto considera trabajo con audiencias, marcas, piezas audiovisuales, productos y servicios.</p><p>Atendiendo al quehacer en investigación y creación de la Facultad de Arquitectura y Urbanismo, se relaciona con las áreas prioritarias de <em>Conservación e intervención de obras, entornos y ciudades patrimoniales</em>, <em>Culturas visuales, materiales-inmateriales y mediales</em>.</p><p class="mb-0">Y atendiendo a las Líneas de Investigación del Departamento de Diseño, se relaciona con: <em>Identidad y Patrimonio</em>, <em>Estudios Visuales y Mediales</em>.</p>',
+                '<p>Académica adscrita a la Escuela de Pregrado. Dedicada al diseño gráfico en general, con experiencia en identidad visual, diseño editorial, ilustración aplicada a diseño de <i>packaging</i>, diseño de etiquetas de vino y otras piezas gráficas <i>display</i> corporativas en general. Experiencia en interacción del Color.</p><p>Atendiendo al quehacer en investigación y creación de la Facultad de Arquitectura y Urbanismo, se relaciona con las áreas prioritarias de <em>Culturas visuales, materiales-inmateriales y mediales</em>, <em>Fenómenos sensibles, perceptuales y corporales en el entorno</em>.</p><p class="mb-0">Y atendiendo a las Líneas de Investigación del Departamento de Diseño, se relaciona con: <em>Morfología, Percepción y Color</em>, <em>Diseño Editorial y Tipografía</em>.</p>',
+                '<p>Académico adscrito a la Escuela de Pregrado. Dedicado a las prácticas creativas transdiciplinares, donde los procesos de investigación y creación se vinculen con temas de tecnología, desarrollo, innovación y ecología, desde aspectos simbólicos y culturales.</p><p>Vinculando arte y diseño, mientras atiende al quehacer en investigación y creación de la Facultad de Arquitectura y Urbanismo, se relaciona con las áreas prioritarias de <em>Culturas visuales, materiales-inmateriales y mediales</em>, <em>Fenómenos sensibles, perceptuales y corporales en el entorno</em>.</p><p class="mb-0">Y atendiendo a las Líneas de Investigación del Departamento de Diseño, se relaciona con: <em>Materiales, Tecnologías y Procesos</em>, <em>Morfología, Percepción y Color</em>, <em>Estudios Visuales y Mediales</em>.</p>',
+                '<p>Académico adscrito a la Escuela de Pregrado. Dedicado al diseño para realidad virtual y mixta, sistema de visualización para simulaciones y medios digitales interactivos.</p><p>Atendiendo al quehacer en investigación y creación de la Facultad de Arquitectura y Urbanismo, se relaciona con las áreas prioritarias de <em>Creación, innovación proyectual y desarrollos tecnológicos</em>, <em>Culturas visuales, materiales-inmateriales y mediales</em>.</p><p class="mb-0">Y atendiendo a las Líneas de Investigación del Departamento de Diseño, se relaciona con: <em>Materiales, Tecnologías y Procesos</em>.</p>',
+                '<p>Académica adscrita al Instituto de la Vivienda. Especialista en la investigación del entorno, desde ergonomía y factores humanos hasta el derecho a la ciudad y al territorio.</p><p>Atendiendo al quehacer en investigación y creación de la Facultad de Arquitectura y Urbanismo, se relaciona con el área prioritaria de <em>Fenómenos sensibles, perceptuales y corporales en el entorno</em>.</p><p class="mb-0">Y atendiendo a las Líneas de Investigación del Departamento de Diseño, se relaciona con: <em>Diseño centrado en la persona</em>.</p>',
+                '<p>Académico adscrito al Departamento de Diseño. Entre sus temas destacan: Sistema de símbolos, signos, imagen corporativa, narrativa visual, iconografía mapuche, representación gráfica, expresión gráfica, transdisciplina arte-diseño, patrimonio en diseño, cultura visual.</p><p>Atendiendo al quehacer en investigación y creación de la Facultad de Arquitectura y Urbanismo, se relaciona con las áreas prioritaria de <em>Culturas visuales, materiales-inmateriales y mediales</em>, <em>Fenómenos sensibles, perceptuales y corporales en el entorno</em>.</p><p class="mb-0">Y atendiendo a las Líneas de Investigación del Departamento de Diseño, se relaciona con: <em>Morfología, Percepción y Color</em>, <em>Identidad y Patrimonio</em>, <em>Estudios Visuales y Mediales</em>.</p>',
+                '<p>Académico adscrito a la Escuela de Pregrado. Especialista en teoría crítica, epistemología de la comunicación y del diseño, cultura audiovisual, cine chileno y crítica de cine; teoría e historia del diseño, crítica de arte, teorías de la comunicación, estética.</p><p>Atendiendo al quehacer en investigación y creación de la Facultad de Arquitectura y Urbanismo, se relaciona con las áreas prioritaria de <em>Dinámicas y transformaciones morfológicas, urbanas y rurales</em>, <em>Creación, innovación proyectual y desarrollos tecnológicos</em>, <em>Culturas visuales, materiales-inmateriales y mediales</em>.</p><p class="mb-0">Y atendiendo a las Líneas de Investigación del Departamento de Diseño, se relaciona con: <em>Identidad y Patrimonio</em>, <em>Estudios Visuales y Mediales</em>.</p>',
+                '<p>Académico adscrito al Departamento de Diseño. Dedicado al estudio constante de tecnologías, técnicas y oficios en el desarrollo de productos, customización y co-creación. Creación, Innovación y desarrollo Tecnológico.</p><p>Atendiendo al quehacer en investigación y creación de la Facultad de Arquitectura y Urbanismo, se relaciona con el área prioritaria de <em>Creación, innovación proyectual y desarrollos tecnológicos</em>.</p><p class="mb-0">Y atendiendo a las Líneas de Investigación del Departamento de Diseño, se relaciona con: <em>Diseño centrado en la persona</em>, <em>Materiales, Tecnologías y Procesos</em>, <em>Identidad y Patrimonio</em>.</p>',
+                '<p>Académico adscrito al Departamento de Diseño. Dedicado al estudio constante de tecnologías, técnicas y oficios en el desarrollo de productos, customización y co-creación. Creación, Innovación y desarrollo Tecnológico.</p><p>Atendiendo al quehacer en investigación y creación de la Facultad de Arquitectura y Urbanismo, se relaciona con el área prioritaria de <em>Creación, innovación proyectual y desarrollos tecnológicos</em>.</p><p class="mb-0">Y atendiendo a las Líneas de Investigación del Departamento de Diseño, se relaciona con: <em>Diseño centrado en la persona</em>, <em>Materiales, Tecnologías y Procesos</em>, <em>Identidad y Patrimonio</em>.</p>',
+                '<p>Académico adscrito al Departamento de Diseño y al Instituto de Historia. Especialista en Historia y teoría del diseño, cultura visual y cultura material. Significación, semiologia y semántica del diseño. Muralismo, <i>street art</i> y relaciones del diseño con el arte y la arquitectura.</p><p>Atendiendo al quehacer en investigación y creación de la Facultad de Arquitectura y Urbanismo, se relaciona con las áreas prioritarias de <em>Conservación e intervención de obras, entornos y ciudades patrimoniales</em>, <em>Culturas visuales, materiales-inmateriales y mediales</em>, <em>Fenómenos sensibles, perceptuales y corporales en el entorno</em>.</p><p class="mb-0">Y atendiendo a las Líneas de Investigación del Departamento de Diseño, se relaciona con: <em>Morfología, Percepción y Color</em>, <em>Identidad y Patrimonio</em>, <em>Estudios Visuales y Mediales</em>.</p>',
+                '<p>Académico adscrito al Departamento de Diseño. Experto en investigación en estética del diseño, historia del diseño, estudios culturales.</p><p>Atendiendo al quehacer en investigación y creación de la Facultad de Arquitectura y Urbanismo, se relaciona con el área prioritaria de <em>Culturas visuales, materiales-inmateriales y mediales</em>.</p><p class="mb-0">Y atendiendo a las Líneas de Investigación del Departamento de Diseño, se relaciona con: <em>Morfología, Percepción y Color</em>, <em>Identidad y Patrimonio</em>, <em>Estudios Visuales y Mediales</em>.</p>',
+                '<p>Académica adscrita a la Escuela de Pregrado. Dedicada al estudio de las emociones, la elaboración de didácticas para la creatividad, el desarrollo de prototipos de servicios y la gamificación como instrumento para la conceptualización. A ello suma las aplicaciones biométricas para estudios de percepción, el desarrollo de estudios cualitativos de innovación y la transferencia con la industria.</p><p>Atendiendo al quehacer en investigación y creación de la Facultad de Arquitectura y Urbanismo, se relaciona con el área prioritaria de <em>Creación, innovación proyectual y desarrollos tecnológicos</em>.</p><p class="mb-0">Y atendiendo a las Líneas de Investigación del Departamento de Diseño, se relaciona con: <em>Diseño centrado en la persona</em>.</p>',
+                '<p>Académica adscrita al Departamento de Diseño. Dedicada al desarrollo de materiales biobasados desde residuos para el diseño, desde una perspectiva de ciclo de vida y economía circular.</p><p>Atendiendo al quehacer en investigación y creación de la Facultad de Arquitectura y Urbanismo, se relaciona con el área prioritaria de <em>Creación, innovación proyectual y desarrollos tecnológicos</em>.</p><p class="mb-0">Y atendiendo a las Líneas de Investigación del Departamento de Diseño, se relaciona con: <em>Materiales, Tecnologías y Procesos</em>.</p>',
+                '<p>Académico adscrito al Departamento de Diseño. Sus temas corren por dos lineas disciplinares: La primera dice relación con el desarrollo de proyectos orientados a vinculación con el medio, con énfasis en productos relacionados con producción gráfica. Y por otro lado están los proyectos orientados a diseño de vehículos y electromovilidad.</p><p>Atendiendo al quehacer en investigación y creación de la Facultad de Arquitectura y Urbanismo, se relaciona con el área prioritaria de <em>Creación, innovación proyectual y desarrollos tecnológicos</em>.</p><p class="mb-0">Y atendiendo a las Líneas de Investigación del Departamento de Diseño, se relaciona con: <em>Materiales, Tecnologías y Procesos</em>, <em>Estudios Visuales y Mediales</em>.</p>',
 
-                    Papa.parse("https://raw.githubusercontent.com/disenouchile/seminarios/refs/heads/main/participan.csv", {
-                        download: true,
-                        header: true,
-                        complete: function (results) {
-                            console.log(results);
-                            profe.addEventListener("change", (e) => {
-                            centena.innerHTML = "";
-                            var contador = 1;
-                            results.data.forEach((d, i) => {
-                                if(d.comision.includes(e.target.value)){
-                                    centena.innerHTML += `<div class="col jornada${d.jornada}">
+            ];
+            Papa.parse("https://raw.githubusercontent.com/disenouchile/seminarios/refs/heads/main/participan.csv", {
+                download: true,
+                header: true,
+                complete: function (results) {
+                    console.log(results);
+                    profe.addEventListener("change", (e) => {
+                        window.location.hash = "alternativas";
+                        centena.innerHTML = "";
+                        var contador = 1;
+                        results.data.forEach((d, i) => {
+                            if (d.comision.includes(e.target.value)) {
+                                centena.innerHTML += `<div class="col jornada${d.jornada}">
                                           <div class="card h-100 small">
                                             <div class="card-header bg-white border-0 mt-1">
                                                 <span class="contador">${contador}</span><br>
@@ -247,13 +301,121 @@
                                             </div>
                                           </div>
                                         </div>`;
-                                        contador = contador + 1;
-                                }
-                            })
+                                contador = contador + 1;
+                            }
+                        });
 
-                        })
-                    }
-                });
+                        if (e.target.value == "P. Bascuñan") {
+                            perfil.innerHTML = "";
+                            perfil.innerHTML = `<div class="card small mb-3 bg-light shadow-sm text-body-secondary"> ${calificadores[0]}</p>`;
+                        } else if (e.target.value == "E. Castillo") {
+                            perfil.innerHTML = "";
+                            perfil.innerHTML = `<div class="card small mb-3 bg-light shadow-sm text-body-secondary"> ${calificadores[1]} </div>`;
+                        } else if (e.target.value == "M. Cattan") {
+                            perfil.innerHTML = "";
+                            perfil.innerHTML = `<div class="card small mb-3 bg-light shadow-sm text-body-secondary"> ${calificadores[2]}</p>`;
+                        } else if (e.target.value == "C. Cortés") {
+                            perfil.innerHTML = "";
+                            perfil.innerHTML = `<div class="card small mb-3 bg-light shadow-sm text-body-secondary"> ${calificadores[3]}</p>`;
+                        } else if (e.target.value == "F. Cortez") {
+                            perfil.innerHTML = "";
+                            perfil.innerHTML = `<div class="card small mb-3 bg-light shadow-sm text-body-secondary"> ${calificadores[4]}</p>`;
+                        } else if (e.target.value == "P. de la Sotta") {
+                            perfil.innerHTML = "";
+                            perfil.innerHTML = `<div class="card small mb-3 bg-light shadow-sm text-body-secondary"> ${calificadores[5]}</p>`;
+                        } else if (e.target.value == "P. Domínguez") {
+                            perfil.innerHTML = "";
+                            perfil.innerHTML = `<div class="card small mb-3 bg-light shadow-sm text-body-secondary"> ${calificadores[6]}</p>`;
+                        } else if (e.target.value == "S. Donoso") {
+                            perfil.innerHTML = "";
+                            perfil.innerHTML = `<div class="card small mb-3 bg-light shadow-sm text-body-secondary"> ${calificadores[7]}</p>`;
+                        } else if (e.target.value == "P. Gatica") {
+                            perfil.innerHTML = "";
+                            perfil.innerHTML = `<div class="card small mb-3 bg-light shadow-sm text-body-secondary"> ${calificadores[8]}</p>`;
+                        } else if (e.target.value == "C. Gómez") {
+                            perfil.innerHTML = "";
+                            perfil.innerHTML = `<div class="card small mb-3 bg-light shadow-sm text-body-secondary"> ${calificadores[9]}</p>`;
+                        } else if (e.target.value == "R. Jacob") {
+                            perfil.innerHTML = "";
+                            perfil.innerHTML = `<div class="card small mb-3 bg-light shadow-sm text-body-secondary"> ${calificadores[10]}</p>`;
+                        } else if (e.target.value == "L. Lares") {
+                            perfil.innerHTML = "";
+                            perfil.innerHTML = `<div class="card small mb-3 bg-light shadow-sm text-body-secondary"> ${calificadores[11]}</p>`;
+                        } else if (e.target.value == "F. Maldonado") {
+                            perfil.innerHTML = "";
+                            perfil.innerHTML = `<div class="card small mb-3 bg-light shadow-sm text-body-secondary"> ${calificadores[12]}</p>`;
+                        } else if (e.target.value == "A. Marín") {
+                            perfil.innerHTML = "";
+                            perfil.innerHTML = `<div class="card small mb-3 bg-light shadow-sm text-body-secondary"> ${calificadores[13]}</p>`;
+                        } else if (e.target.value == "C. Menteguiaga") {
+                            perfil.innerHTML = "";
+                            perfil.innerHTML = `<div class="card small mb-3 bg-light shadow-sm text-body-secondary"> ${calificadores[14]}</p>`;
+                        } else if (e.target.value == "A. Meza") {
+                            perfil.innerHTML = "";
+                            perfil.innerHTML = `<div class="card small mb-3 bg-light shadow-sm text-body-secondary"> ${calificadores[15]}</p>`;
+                        } else if (e.target.value == "A. Mora") {
+                            perfil.innerHTML = "";
+                            perfil.innerHTML = `<div class="card small mb-3 bg-light shadow-sm text-body-secondary"> ${calificadores[16]}</p>`;
+                        } else if (e.target.value == "P. Núñez") {
+                            perfil.innerHTML = "";
+                            perfil.innerHTML = `<div class="card small mb-3 bg-light shadow-sm text-body-secondary"> ${calificadores[17]}</p>`;
+                        } else if (e.target.value == "A. Osorio") {
+                            perfil.innerHTML = "";
+                            perfil.innerHTML = `<div class="card small mb-3 bg-light shadow-sm text-body-secondary"> ${calificadores[18]}</p>`;
+                        } else if (e.target.value == "R. Osses") {
+                            perfil.innerHTML = "";
+                            perfil.innerHTML = `<div class="card small mb-3 bg-light shadow-sm text-body-secondary"> ${calificadores[19]}</p>`;
+                        } else if (e.target.value == "R. Perea") {
+                            perfil.innerHTML = "";
+                            perfil.innerHTML = `<div class="card small mb-3 bg-light shadow-sm text-body-secondary"> ${calificadores[20]}</p>`;
+                        } else if (e.target.value == "M. Pinto") {
+                            perfil.innerHTML = "";
+                            perfil.innerHTML = `<div class="card small mb-3 bg-light shadow-sm text-body-secondary"> ${calificadores[21]}</p>`;
+                        } else if (e.target.value == "G. Pradenas") {
+                            perfil.innerHTML = "";
+                            perfil.innerHTML = `<div class="card small mb-3 bg-light shadow-sm text-body-secondary"> ${calificadores[22]}</p>`;
+                        } else if (e.target.value == "D. Reyes") {
+                            perfil.innerHTML = "";
+                            perfil.innerHTML = `<div class="card small mb-3 bg-light shadow-sm text-body-secondary"> ${calificadores[23]}</p>`;
+                        } else if (e.target.value == "B. Rossi") {
+                            perfil.innerHTML = "";
+                            perfil.innerHTML = `<div class="card small mb-3 bg-light shadow-sm text-body-secondary"> ${calificadores[24]}</p>`;
+                        } else if (e.target.value == "R. Silva") {
+                            perfil.innerHTML = "";
+                            perfil.innerHTML = `<div class="card small mb-3 bg-light shadow-sm text-body-secondary"> ${calificadores[25]}</p>`;
+                        } else if (e.target.value == "L. Soto") {
+                            perfil.innerHTML = "";
+                            perfil.innerHTML = `<div class="card small mb-3 bg-light shadow-sm text-body-secondary"> ${calificadores[26]}</p>`;
+                        } else if (e.target.value == "H. Stange") {
+                            perfil.innerHTML = "";
+                            perfil.innerHTML = `<div class="card small mb-3 bg-light shadow-sm text-body-secondary"> ${calificadores[27]}</p>`;
+                        } else if (e.target.value == "L. Soto") {
+                            perfil.innerHTML = "";
+                            perfil.innerHTML = `<div class="card small mb-3 bg-light shadow-sm text-body-secondary"> ${calificadores[28]}</p>`;
+                        } else if (e.target.value == "M. Tapia") {
+                            perfil.innerHTML = "";
+                            perfil.innerHTML = `<div class="card small mb-3 bg-light shadow-sm text-body-secondary"> ${calificadores[29]}</p>`;
+                        } else if (e.target.value == "R. Vera") {
+                            perfil.innerHTML = "";
+                            perfil.innerHTML = `<div class="card small mb-3 bg-light shadow-sm text-body-secondary"> ${calificadores[30]}</p>`;
+                        } else if (e.target.value == "M. Vico") {
+                            perfil.innerHTML = "";
+                            perfil.innerHTML = `<div class="card small mb-3 bg-light shadow-sm text-body-secondary"> ${calificadores[31]}</p>`;
+                        } else if (e.target.value == "M. Vielma") {
+                            perfil.innerHTML = "";
+                            perfil.innerHTML = `<div class="card small mb-3 bg-light shadow-sm text-body-secondary"> ${calificadores[32]}</p>`;
+                        } else if (e.target.value == "A. Wechsler") {
+                            perfil.innerHTML = "";
+                            perfil.innerHTML = `<div class="card small mb-3 bg-light shadow-sm text-body-secondary"> ${calificadores[33]}</p>`;
+                        } else if (e.target.value == "O. Zorzano") {
+                            perfil.innerHTML = "";
+                            perfil.innerHTML = `<div class="card small mb-3 bg-light shadow-sm text-body-secondary"> ${calificadores[34]}</p>`;
+                        } else {
+                            perfil.innerHTML = "";
+                        }
+                    });
+                },
+            });
         </script>
     </body>
 </html>
