@@ -12,126 +12,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" />
-        <style>
-            body {
-                font-family: "IBM Plex Sans", sans-serif;
-                color: #081626;
-                padding: 1.5rem 1rem;
-            }
-
-            @media (min-width: 799px) {
-                .container {
-                    max-width: 800px;
-                }
-            }
-            em {
-                font-weight: bold;
-                font-style: normal;
-            }
-
-            header h1 {
-                color: #102b4a;
-                line-height: 1;
-                font-weight: 900;
-                margin: 2rem -0.2rem;
-                text-decoration: underline;
-                font-size: 10vw;
-            }
-
-            @media (orientation: landscape) {
-                header h1 {
-                    font-size: calc(1rem + 5vw);
-                }
-            }
-
-            header h2 {
-                color: #102b4a;
-            }
-
-            header address {
-                color: #102b4a;
-                letter-spacing: 0.145rem;
-            }
-
-            @media (orientation: portrait) {
-                header h2.fs-3 {
-                    font-size: 1rem !important;
-                }
-                header address.fs-4 {
-                    font-size: 0.93rem !important;
-                    letter-spacing: 0.045rem;
-                }
-            }
-
-            header h3 em {
-                font-weight: 500;
-            }
-
-            h3 {
-                font-weight: bold;
-            }
-
-            h3 > span {
-                font-size: 75%;
-                font-weight: normal;
-            }
-
-            dd > a {
-                font-weight: bold;
-            }
-
-            select.form-select {
-                width: auto;
-            }
-
-            img#escudo {
-                width: calc(10vh + 5.5vw);
-                margin: 3vh 0 9vh 0;
-            }
-
-            .card {
-                border-radius: 0;
-                border: none;
-                box-shadow: 0 0 3px #ddd;
-            }
-
-            div.card-footer > small > em {
-                color: silver;
-            }
-
-            aside > em {
-                color: #081626;
-            }
-            span.contador {
-                box-shadow: inset 0 0 3px #ccc;
-                background: #eee;
-                min-width: 1.1rem;
-                padding: 0.1rem 0.2rem;
-                text-align: center;
-                display: inline-block;
-                font-size: 0.6rem;
-                margin-bottom: 0.5rem;
-                margin-left: -0.1rem;
-                color: #aaa;
-            }
-
-            div#perfil > div.card {
-                padding: 0.6rem 0.9rem 0.3rem 0.6rem;
-            }
-
-            div#perfil > div.card > p > em {
-                font-weight: 400;
-                font-style: italic !important;
-                text-decoration: underline;
-            }
-
-            #central{
-                background:#fafafa url("hall-central-ampliado.jpg") no-repeat center bottom;
-                background-size:100% auto;
-                padding-bottom:5vh;
-                box-shadow: 0 0 4px #ddd;
-            }
-        </style>
+        <link href="style.css" rel="stylesheet"/>
     </head>
     <body style="background: #f5f5f5;">
         <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
@@ -158,11 +39,15 @@
 
                         <h1>Sesión de póster académico</h1>
 
-                        <h4 id="alternativas">Comisiones por Profesor/a</h4>
+                        <h2>Resultados del seminario de investigación para optar al grado académico de <em>Licenciado/a en Diseño de la Universidad de Chile</em>.</h2>
+
+                        <img src="escudo.svg" id="escudo" />
+
+                        <h4 id="alternativas" class="pt-5 d-flex justify-content-between align-items-center"><span>Comisiones por Profesor/a</span> <a class="btn btn-sm btn-warning " href="index.html#alternativas">Ver articipantes por jornada</a></h4>
                     </header>
                     <main>
                         <select class="form-select form-select-sm ms-md-auto w-100 mb-2" id="profe">
-                            <option selected>Seleccione…</option>
+                            <option selected>Seleccione Profesor/a…</option>
                             <option value="P. Bascuñan">Patricio Bascuñan</option>
                             <option value="E. Castillo">Eduardo Castillo</option>
                             <option value="M. Cattan">Magdalena Cattan</option>
@@ -201,9 +86,41 @@
 
                         <div id="perfil"></div>
                         <div class="row row-cols-2 row-cols-md-3 row-cols-xxl-4 g-2" id="participantes"></div>
+                        
+                        
+
                     </main>
 
-                    <footer class="my-5"></footer>
+                    <aside class="my-5 small text-body-secondary"><em>Palabras clave en las investigaciones participantes:</em> <span id="keywords" class="small fst-italic p-1"></span></aside>
+
+                    <footer class="my-5">
+                        <dl>
+                            <dt class="fs-4">Invitan</dt>
+                            <dd>
+                                <a href="https://fau.uchile.cl/diseno" title="Departamento de Diseño" target="_blank" class="link-dark">DdD</a> — FAU — Universidad de Chile<br />
+                                <a href="https://fau.uchile.cl/investigacion" title="Dirección de Investigación y Creación" target="_blank" class="link-dark">DIC</a> — FAU — Universidad de Chile
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt class="fs-4">Organizan</dt>
+                            <dd>
+                                <a href="https://fau.uchile.cl/carreras/4929/diseno" target="_blank" class="link-dark">Carrera de Diseño</a> — Escuela de Pregrado — FAU — Universidad de Chile<br />
+                                <a href="https://fau.uchile.cl/extension" title="Dirección de Extensión y Vinculación con el Medio" target="_blank" class="link-dark">DEXVM</a> — FAU — Universidad de Chile
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt class="fs-4">Colabora</dt>
+                            <dd><a href="https://www.redis.cl/" target="_blank" class="link-dark">ReDis</a> — Consejo de Rectores de las Universidades de Chilenas</dd>
+                        </dl>
+
+                        <div class="alert alert-light" style="margin: 3rem -0.2rem 0 -0.2rem;">
+                            <p class="m-0 small">
+                                Si usted pertenece a la <a href="https://www.redis.cl/index.php/quienes-somos/" target="_blank" class="link-dark">ReDis</a>: Puede inscribirse en
+                                <a href="https://docs.google.com/forms/d/e/1FAIpQLSf21gqpCbLpDh2E4apb9BzTKWtf-Zw7bHoDwmTmQtePEnzpWw/viewform?usp=sharing" class="link-dark" target="_blank">este formulario</a> para asistir a Sesión de póster
+                                académico y, también, asistir a la entrega final y abierta de <a href="https://disenouchile.github.io/proyectos/" class="link-dark">Proyectos</a>.
+                            </p>
+                        </div>
+                    </footer>
                 </div>
             </div>
         </div>
@@ -276,10 +193,40 @@
                 header: true,
                 complete: function (results) {
                     console.log(results);
+
+                    results.data.forEach((d, i) => {
+                        palabrasClave = palabrasClave + d.palabras_clave + ",";
+                    });
+
+                    palabrasClave = palabrasClave.split(",");
+                    palabrasClave = palabrasClave.map((e) => e.trim());
+                    palabrasClave = palabrasClave.filter((e) => e);
+                    palabrasClave = palabrasClave
+                        .reduce(
+                            (a, b) => {
+                                b.toUpperCase() === b ? a[0].push(b) : a[1].push(b);
+                                return a;
+                            },
+                            [[], []]
+                        )
+                        .flatMap((e) => e.sort((a, b) => a.localeCompare(b)));
+                    palabrasClave = [...new Set(palabrasClave)];
+                    console.log(palabrasClave);
+
+                    palabrasClave.forEach((k, i) => {
+                        if (i !== palabrasClave.length - 1) {
+                            donde.innerHTML += `${k}, `;
+                        } else {
+                            donde.innerHTML += `${k}.`;
+                        }
+                    });
+
+
                     profe.addEventListener("change", (e) => {
                         window.location.hash = "alternativas";
                         centena.innerHTML = "";
                         var contador = 1;
+
                         results.data.forEach((d, i) => {
                             if (d.comision.includes(e.target.value)) {
                                 centena.innerHTML += `<div class="col jornada${d.jornada}">
