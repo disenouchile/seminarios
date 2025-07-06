@@ -1,0 +1,372 @@
+[
+    {
+        "nombre_alfabetico": "Alarcón Rivas, Sofía Victoria",
+        "nombre": "Sofía Alarcón Rivas",
+        "profe": "Paola De la Sotta",
+        "titulo": "Cerámicas Cachagua: Vestigio innovador de la memoria de la industria cerámica nacional",
+        "lineas": "Materiales, Tecnologías y Procesos | Morfología, Percepción y Color | Identidad y Patrimonio",
+        "areas": "Dimensiones socioecológicas en el territorio | Creación, innovación proyectual y desarrollos tecnológicos | Culturas visuales, materiales-inmateriales y mediales",
+        "keywords": "industria, fábrica, cerámica, Cachagua",
+        "bloque": 1
+    },
+    {
+        "nombre_alfabetico": "Castro Yévenes, Paz Belén de los Angeles",
+        "nombre": "Paz  Castro Yévenes",
+        "profe": "René Perea",
+        "titulo": "Diseño Industrial para el proceso productivo en viñas boutique de colchagua",
+        "lineas": "Materiales, Tecnologías y Procesos",
+        "areas": "Dimensiones socioecológicas en el territorio | Creación, innovación proyectual y desarrollos tecnológicos",
+        "keywords": "procesos, industria, territorio",
+        "bloque": 1
+    },
+    {
+        "nombre_alfabetico": "Cornejo Yáñez, Vicente Alonso",
+        "nombre": "Vicente Cornejo Yañez",
+        "profe": "Pablo Domínguez",
+        "titulo": "Materiales Biobasados en el escenario nacional.  Análisis para su desarrollo y vínculo con la industria",
+        "lineas": "Materiales, Tecnologías y Procesos",
+        "areas": "Sistemas físicos, naturales y cambios ambientales | Dimensiones socioecológicas en el territorio | Creación, innovación proyectual y desarrollos tecnológicos",
+        "keywords": "biobasados, materiales, producción, industria",
+        "bloque": 1
+    },
+    {
+        "nombre_alfabetico": "Cruzat Cortés, Bastián Esteban",
+        "nombre": "Bastian Cruzat Cortés",
+        "profe": "Antonio Marín",
+        "titulo": "El impacto de las posturas de juego en el sistema musculoesquelético de lo jugadores amateurs de FPS: Un enfoque ergonómico de la interacción del jugador con su setup de computadora",
+        "lineas": "Diseño centrado en la persona",
+        "areas": "Creación, innovación proyectual y desarrollos tecnológicos | Fenómenos sensibles, perceptuales y corporales en el entorno",
+        "keywords": "ergonomía, setup, FPS, jugador",
+        "bloque": 1
+    },
+    {
+        "nombre_alfabetico": "Díaz Valdivia, María Jacqueline",
+        "nombre": "Maria Diaz Valdivia",
+        "profe": "Sergio Donoso",
+        "titulo": "Disepo para el cuidado: El Impacto de los objetos cotidianos en la experiencia de recuperación de supervivientes de ACV en Chile",
+        "lineas": "Diseño centrado en la persona | Morfología, Percepción y Color",
+        "areas": "Fenómenos sensibles, perceptuales y corporales en el entorno",
+        "keywords": "ACV, objetos cotidianos, rehabilitación, entorno doméstico.",
+        "bloque": 1
+    },
+    {
+        "nombre_alfabetico": "Echenique González, Gabriela Josefina",
+        "nombre": "Gabriela Echenique Gonzalez",
+        "profe": "Rubén Jacob",
+        "titulo": "Investigación exploratoria sobre los efectos de distintas intercciones fisicas y formas en herrmientas autoreguladoras en el alivio de síntomas de ansiedas y toc en personas universitarias..",
+        "lineas": "Diseño centrado en la persona | Morfología, Percepción y Color",
+        "areas": "Creación, innovación proyectual y desarrollos tecnológicos | Fenómenos sensibles, perceptuales y corporales en el entorno",
+        "keywords": "curativo , ansiedad, fidget-tools , interacciones",
+        "bloque": 1
+    },
+    {
+        "nombre_alfabetico": "González López, Margarita Isabel",
+        "nombre": "Margarita González López",
+        "profe": "Iván Méndez",
+        "titulo": "Estética del diseño de objeto de lo cotidiano en la vivienda DFL2 en el contexto de la llegada de IKEA a Chile",
+        "lineas": "Diseño centrado en la persona | Identidad y Patrimonio | Estudios Visuales y Mediales",
+        "areas": "Asentamientos, movilidades y orgánicas comunitarias | Culturas visuales, materiales-inmateriales y mediales | Fenómenos sensibles, perceptuales y corporales en el entorno",
+        "keywords": "vivienda DFL2, IKEA, estética, cultura material",
+        "bloque": 1
+    },
+    {
+        "nombre_alfabetico": "Marihuén Parra, Edgardo Isaac",
+        "nombre": "Edgardo Marihuén Parra",
+        "profe": "Mitzi Vielma",
+        "titulo": "El vínculo emocional con dispositivos periféricos en el ocio audiovisual en contextos de soledad",
+        "lineas": "Diseño centrado en la persona | Materiales, Tecnologías y Procesos | Morfología, Percepción y Color",
+        "areas": "Dinámicas y transformaciones morfológicas, urbanas y rurales | Creación, innovación proyectual y desarrollos tecnológicos",
+        "keywords": "soledad, periféricos, vínculos, emociones",
+        "bloque": 1
+    },
+    {
+        "nombre_alfabetico": "Olivares Frois, Isidora Paz",
+        "nombre": "Isidora Olivares Frois",
+        "profe": "Sergio Donoso",
+        "titulo": "La influencia ULM en la génesis del Diseño Chileno sobre las Metodologías Académicas Contemporáneas",
+        "lineas": "Identidad y Patrimonio",
+        "areas": "Creación, innovación proyectual y desarrollos tecnológicos",
+        "keywords": "metodología, Ulm, diseño contemporáneo",
+        "bloque": 1
+    },
+    {
+        "nombre_alfabetico": "Ordenes Labrin, Benjamin Andres",
+        "nombre": "Benjamin Órdenes Labrín",
+        "profe": "Antonio Marín",
+        "titulo": "Medición de la percepción del usuario frente a la calefacción como punto de partida para el trabajo de diseño",
+        "lineas": "Diseño centrado en la persona | Morfología, Percepción y Color",
+        "areas": "Dimensiones socioecológicas en el territorio | Creación, innovación proyectual y desarrollos tecnológicos",
+        "keywords": "pobreza energética, relación usuario-objeto, calefacción,",
+        "bloque": 1
+    },
+    {
+        "nombre_alfabetico": "Sáez Duarte, Germán Salvador",
+        "nombre": "Germán Sáez Duarte",
+        "profe": "René Perea",
+        "titulo": "Experimentación con látex natural: Intervenciones ornamentales sobre residuos textiles bajo metodología de upcycling",
+        "lineas": "Materiales, Tecnologías y Procesos | Morfología, Percepción y Color",
+        "areas": "Sistemas físicos, naturales y cambios ambientales | Creación, innovación proyectual y desarrollos tecnológicos | Fenómenos sensibles, perceptuales y corporales en el entorno",
+        "keywords": "upcycling, látex líquido, ornamento, sustentabilidad",
+        "bloque": 1
+    },
+    {
+        "nombre_alfabetico": "Ulloa Neira, Consuelo Fernanda",
+        "nombre": "Consuelo Ulloa Neira",
+        "profe": "Rubén Jacob",
+        "titulo": "La Sobrecarga o la Simplicidad Visual de los muros: Explorando los efectos de la decoración mural de los dormitorios en nuestro bienestar",
+        "lineas": "Diseño centrado en la persona",
+        "areas": "Creación, innovación proyectual y desarrollos tecnológicos",
+        "keywords": "decoración, mural, dormitorios, saturador, simplicidad, bienestar",
+        "bloque": 1
+    },
+    {
+        "nombre_alfabetico": "Alarcon Gangas, Benjamin Exequiel",
+        "nombre": "Benjamin Alarcon Gangas",
+        "profe": "Felipe Cortez",
+        "titulo": "El Daltonismo y la Comunicación Visual: Explorando la Diversidad Sensorial",
+        "lineas": "Diseño centrado en la persona | Morfología, Percepción y Color",
+        "areas": "Fenómenos sensibles, perceptuales y corporales en el entorno",
+        "keywords": "daltonismo, comunicación visual, experiencia sensorial",
+        "bloque": 2
+    },
+    {
+        "nombre_alfabetico": "Bustos Montero, Martín Gonzalo Julián",
+        "nombre": "Martín Bustos Montero",
+        "profe": "Bruno Perelli",
+        "titulo": "La inteligencia artificial en procesos de diseño: Nuevas formas de extender la creatividad en entornos tecnológicos",
+        "lineas": "Diseño centrado en la persona | Materiales, Tecnologías y Procesos",
+        "areas": "Creación, innovación proyectual y desarrollos tecnológicos | Fenómenos sensibles, perceptuales y corporales en el entorno",
+        "keywords": "creatividad, diseño, tecnología e inteligencia artificial.",
+        "bloque": 2
+    },
+    {
+        "nombre_alfabetico": "Cabezas Cáceres, Javiera Paz",
+        "nombre": "Javiera Cabezas Cáceres",
+        "profe": "Jacob Bustamante",
+        "titulo": "¡Pánico! Coherencia de la significación en los materiales de enseñanza de chino y español: un análisis semiótico de la relación mensaje-imagen en la enseñanza de adultos",
+        "lineas": "Estudios Visuales y Mediales",
+        "areas": "Culturas visuales, materiales-inmateriales y mediales",
+        "keywords": "semiótica, imagen-mensaje, chino-español, educación de adultos",
+        "bloque": 2
+    },
+    {
+        "nombre_alfabetico": "Contreras Madariaga, Millaray Carla Victoria",
+        "nombre": "Millaray Contreras Madariaga",
+        "profe": "Mauricio Vico",
+        "titulo": "El color en el afiche político de la Unidad Popular (1970-1973) y del afiche de la resistencia en la dictadura militar (1974-1988): Un análisis comparativo",
+        "lineas": "Morfología, Percepción y Color | Estudios Visuales y Mediales",
+        "areas": "Culturas visuales, materiales-inmateriales y mediales",
+        "keywords": "afiche político, color, resistencia visual",
+        "bloque": 2
+    },
+    {
+        "nombre_alfabetico": "Echeverría Medel, Lucas Rodrigo",
+        "nombre": "Lucas Echeverría Medel",
+        "profe": "Hans Stange",
+        "titulo": "El papel de los motores gráficos en la inmersión en los videojuegos",
+        "lineas": "Diseño centrado en la persona | Morfología, Percepción y Color | Estudios Visuales y Mediales",
+        "areas": "Creación, innovación proyectual y desarrollos tecnológicos | Culturas visuales, materiales-inmateriales y mediales | Fenómenos sensibles, perceptuales y corporales en el entorno",
+        "keywords": "inmersión, videojuegos, flujo, percepción",
+        "bloque": 2
+    },
+    {
+        "nombre_alfabetico": "Esparza Arenas, Constanza Catalina",
+        "nombre": "Constanza Esparza Arenas",
+        "profe": "Roberto Osses",
+        "titulo": "Donde habita la forma: Exploración morfológica y sistematización visual de las especies de pingüinos presentes en el territorio chileno",
+        "lineas": "Morfología, Percepción y Color | Identidad y Patrimonio | Diseño Editorial y Tipografía",
+        "areas": "Creación, innovación proyectual y desarrollos tecnológicos | Culturas visuales, materiales-inmateriales y mediales | Fenómenos sensibles, perceptuales y corporales en el entorno",
+        "keywords": "morfología visual, pingüinos chilenos, diseño y naturaleza",
+        "bloque": 2
+    },
+    {
+        "nombre_alfabetico": "Hernández Contreras, Paloma Valentina",
+        "nombre": "Paloma Hernández Contreras",
+        "profe": "Alfredo Mora",
+        "titulo": "Estrategias visuales del K-pop: Aplicaciones y posibilidades para el diseño de álbumes físicos en la industria musical chilena.",
+        "lineas": "Estudios Visuales y Mediales",
+        "areas": "Culturas visuales, materiales-inmateriales y mediales",
+        "keywords": "K-Pop, discografía física, industria musical chilena, estrategia visual",
+        "bloque": 2
+    },
+    {
+        "nombre_alfabetico": "Jarufe Fuenzalida, Samira Paz",
+        "nombre": "Samira Jarufe Fuenzalida",
+        "profe": "Mauricio Vico",
+        "titulo": "Afiches de Ópera, Análisis estilístico de las reproducciones aparecidas de la colección de libros de \\\"La Gran Ópera Paso a Paso\\",
+        "lineas": "Estudios Visuales y Mediales",
+        "areas": "Conservación e intervención de obras, entornos y ciudades patrimoniales | Culturas visuales, materiales-inmateriales y mediales",
+        "keywords": "opera, afiche, evolución, arte",
+        "bloque": 2
+    },
+    {
+        "nombre_alfabetico": "Julia Donoso, Catalina Ignacia",
+        "nombre": "Catalina Juliá Donoso",
+        "profe": "Pamela Gatica",
+        "titulo": "Inscripciones en piel :  El tatuaje como experiencia y como expresión emocional en la construcción de identidad",
+        "lineas": "Diseño centrado en la persona | Estudios Visuales y Mediales",
+        "areas": "Culturas visuales, materiales-inmateriales y mediales",
+        "keywords": "tatuaje, diseño emocional, diseño de experiencia, estética.",
+        "bloque": 2
+    },
+    {
+        "nombre_alfabetico": "Peña Miranda, Susana Gabriela",
+        "nombre": "Susana Peña Miranda",
+        "profe": "Iván Méndez",
+        "titulo": "Manga chileno: Panorama actual de las historietas publicadas y editadas con estética Manga en Chile",
+        "lineas": "Identidad y Patrimonio | Estudios Visuales y Mediales | Diseño Editorial y Tipografía",
+        "areas": "Culturas visuales, materiales-inmateriales y mediales",
+        "keywords": "estética manga, historieta chilena, edición gráfica, narrativa visual",
+        "bloque": 2
+    },
+    {
+        "nombre_alfabetico": "Rodríguez Reyes, Sophia Ignacia",
+        "nombre": "Sophia Rodríguez Reyes",
+        "profe": "Paola De la Sotta",
+        "titulo": "Des-ornamentación: Análisis de la evolución de los tatuajes ancestrales a contemporáneos.",
+        "lineas": "Identidad y Patrimonio",
+        "areas": "Asentamientos, movilidades y orgánicas comunitarias | Culturas visuales, materiales-inmateriales y mediales | Fenómenos sensibles, perceptuales y corporales en el entorno",
+        "keywords": "tatuajes, ornamentación, evolución, identidad",
+        "bloque": 2
+    },
+    {
+        "nombre_alfabetico": "Valdivia Acevedo, Consuelo Del Pilar",
+        "nombre": "Consuelo Valdivia Acevedo",
+        "profe": "Jacob Bustamante",
+        "titulo": "Análisis visual del diseño del packaging y su coherencia con la composición de ingredientes en barras alimenticias del mercado chileno (2025)",
+        "lineas": "Morfología, Percepción y Color | Estudios Visuales y Mediales",
+        "areas": "Culturas visuales, materiales-inmateriales y mediales | Fenómenos sensibles, perceptuales y corporales en el entorno",
+        "keywords": "diseño de packaging, productos ultraprocesados, comunicación visual",
+        "bloque": 2
+    },
+    {
+        "nombre_alfabetico": "Zacconi Méndez, Brandon Andrés",
+        "nombre": "Brandon Zacconi Méndez",
+        "profe": "Bruno Rossi",
+        "titulo": "Realidad Virtual en Diseño de escenarios virtuales que evoquen sensación de kenopsia",
+        "lineas": "Diseño centrado en la persona | Morfología, Percepción y Color | Estudios Visuales y Mediales",
+        "areas": "Creación, innovación proyectual y desarrollos tecnológicos | Culturas visuales, materiales-inmateriales y mediales | Fenómenos sensibles, perceptuales y corporales en el entorno",
+        "keywords": "realidad virtual, espacios liminales, kenopsia, percepción",
+        "bloque": 2
+    },
+    {
+        "nombre_alfabetico": "Cañete Cerda, Maximiliano Andrés",
+        "nombre": "Maximiliano Cañete Cerda",
+        "profe": "Paola De la Sotta",
+        "titulo": "Requerimientos corporales y contextuales para la actividad de escalada en rocódromo: Bases para una prótesis especializada de pie y pierna.",
+        "lineas": "Diseño centrado en la persona | Materiales, Tecnologías y Procesos | Morfología, Percepción y Color",
+        "areas": "Creación, innovación proyectual y desarrollos tecnológicos | Fenómenos sensibles, perceptuales y corporales en el entorno",
+        "keywords": "escalada indoor, biomecánica, prótesis",
+        "bloque": 3
+    },
+    {
+        "nombre_alfabetico": "Escalona Navea, Arlett Yanira",
+        "nombre": "Arlett Escalona Navea",
+        "profe": "René Perea",
+        "titulo": "Movilidad y envejecimiento canino: un estudio de necesidades y oportunidades",
+        "lineas": "Diseño centrado en la persona | Materiales, Tecnologías y Procesos",
+        "areas": "Sistemas físicos, naturales y cambios ambientales | Creación, innovación proyectual y desarrollos tecnológicos | Fenómenos sensibles, perceptuales y corporales en el entorno",
+        "keywords": "envejecimiento canino, salud articular, movilidad reducida, contexto urbano",
+        "bloque": 3
+    },
+    {
+        "nombre_alfabetico": "Jeria Yáñez, Maite Sofía",
+        "nombre": "Maite Jeria Yáñez",
+        "profe": "Pablo Domínguez",
+        "titulo": "Análisis de métodos para el desarrollo de una prótesis en los Canis lupus familiaris.",
+        "lineas": "Materiales, Tecnologías y Procesos",
+        "areas": "Creación, innovación proyectual y desarrollos tecnológicos",
+        "keywords": "prótesis, impresión 3D, amputación, canis lupus familiaris.",
+        "bloque": 3
+    },
+    {
+        "nombre_alfabetico": "Manriquez Leon, Carla Alexandra",
+        "nombre": "Carla Manríquez León",
+        "profe": "Pablo Domínguez",
+        "titulo": "Construcción de vínculos con la ciudad a través de experiencias urbanas infantiles",
+        "lineas": "Diseño centrado en la persona | Identidad y Patrimonio",
+        "areas": "Asentamientos, movilidades y orgánicas comunitarias | Dinámicas y transformaciones morfológicas, urbanas y rurales | Fenómenos sensibles, perceptuales y corporales en el entorno",
+        "keywords": "industrialización, entorno urbano, vínculos, infancia",
+        "bloque": 3
+    },
+    {
+        "nombre_alfabetico": "Marchant López, Constanza Ester",
+        "nombre": "Constanza Marchant Lopez",
+        "profe": "Rebeca Silva",
+        "titulo": "Equipando el Placer: Diseño Inclusivo para Mujeres con Discapacidad Física",
+        "lineas": "Diseño centrado en la persona",
+        "areas": "Fenómenos sensibles, perceptuales y corporales en el entorno",
+        "keywords": "derechos sexuales, autonomía, sexualidad, discapacidad física y diseño inclusivo",
+        "bloque": 3
+    },
+    {
+        "nombre_alfabetico": "Morales Soto, Alisson Lissette",
+        "nombre": "Alisson Morales Soto",
+        "profe": "Rebeca Silva",
+        "titulo": "Cuerpos, cuidados y espacio público: Diseñando la experiencia de la movilidad del cuidado en la ciudad",
+        "lineas": "Diseño centrado en la persona | Identidad y Patrimonio",
+        "areas": "Asentamientos, movilidades y orgánicas comunitarias | Dinámicas y transformaciones morfológicas, urbanas y rurales | Fenómenos sensibles, perceptuales y corporales en el entorno",
+        "keywords": "movilidad, género, espacio público, cuerpos",
+        "bloque": 3
+    },
+    {
+        "nombre_alfabetico": "Núñez Galindo, Alondra Alenguei",
+        "nombre": "Alondra Núñez Galindo",
+        "profe": "Rebeca Silva",
+        "titulo": "Kioskos de autoservicio y adultos mayores: Un desafío en la inclusión digital de las personas mayores",
+        "lineas": "Diseño centrado en la persona",
+        "areas": "Fenómenos sensibles, perceptuales y corporales en el entorno",
+        "keywords": "inclusión digital, personas mayores, kioscos de autoservicio, accesibilidad",
+        "bloque": 3
+    },
+    {
+        "nombre_alfabetico": "Ochoa Martínez, Valentina Ignacia",
+        "nombre": "Valentina Ochoa Martínez",
+        "profe": "Pamela Gatica",
+        "titulo": "Bordando la memoria colectiva: El trauma como condicionante para el activismo de mujeres",
+        "lineas": "Diseño centrado en la persona | Estudios Visuales y Mediales",
+        "areas": "Culturas visuales, materiales-inmateriales y mediales | Fenómenos sensibles, perceptuales y corporales en el entorno",
+        "keywords": "arpilleras, trauma, memoria y activismo",
+        "bloque": 3
+    },
+    {
+        "nombre_alfabetico": "Ramos Yáñez, Magdalena Lucía",
+        "nombre": "Magdalena Ramos Yañez",
+        "profe": "René Perea",
+        "titulo": "Personalización de indumentaria como herramienta de búsqueda identitaria dentro de la generación Z",
+        "lineas": "Diseño centrado en la persona | Materiales, Tecnologías y Procesos",
+        "areas": "Creación, innovación proyectual y desarrollos tecnológicos | Culturas visuales, materiales-inmateriales y mediales",
+        "keywords": "identidad, personalización, indumentaria",
+        "bloque": 3
+    },
+    {
+        "nombre_alfabetico": "Sepúlveda Infante, Sigrid Noelia",
+        "nombre": "Sigrid Sepúlveda Infante",
+        "profe": "Pamela Gatica",
+        "titulo": "La moda como una narrativa sociocultural Análisis de las ediciones de moda de la revista YA Colección (2019-2022)",
+        "lineas": "Identidad y Patrimonio | Estudios Visuales y Mediales | Diseño Editorial y Tipografía",
+        "areas": "Culturas visuales, materiales-inmateriales y mediales | Fenómenos sensibles, perceptuales y corporales en el entorno",
+        "keywords": "moda, narrativa sociocultural, identidad",
+        "bloque": 3
+    },
+    {
+        "nombre_alfabetico": "Simunovic Toledo, Laura Antonia",
+        "nombre": "Laura Simunovic Toledo",
+        "profe": "Felipe Cortez",
+        "titulo": "Región a capital y Tecnologías (asistivas) en estudiantes AuTDAH: Una exploración y análisis cualitativo de los usos que dan estudiantes universitarios de región autistas, con TDAH u ambos para solventar necesidades cotidianas y académicas.",
+        "lineas": "Diseño centrado en la persona | Materiales, Tecnologías y Procesos | Identidad y Patrimonio",
+        "areas": "Fenómenos sensibles, perceptuales y corporales en el entorno",
+        "keywords": "AuTDAH, diversidad funcional, necesidades, tecnologías",
+        "bloque": 3
+    },
+    {
+        "nombre_alfabetico": "Vásquez Agüero, Antonia Javiera",
+        "nombre": "Antonia Vásquez Agüero",
+        "profe": "Mitzi Vielma",
+        "titulo": "Vestuario litúrgico y subcultura gótica: análisis simbólico desde el diseño industrial",
+        "lineas": "Diseño centrado en la persona | Morfología, Percepción y Color | Identidad y Patrimonio | Estudios Visuales y Mediales",
+        "areas": "Culturas visuales, materiales-inmateriales y mediales | Fenómenos sensibles, perceptuales y corporales en el entorno",
+        "keywords": "vestuario litúrgico, subcultura gótica, análisis visual,",
+        "bloque": 3
+    }
+]
