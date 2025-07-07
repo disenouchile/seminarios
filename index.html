@@ -8,99 +8,72 @@
         <meta name="description" content="Sesión de póster académico — Resultados del seminario de investigación para optar al grado académico de Licenciado/a en Diseño de la Universidad de Chile" />
         <meta property="og:image" content="https://disenouchile.github.io/seminarios/seminarios.png" />
         <meta name="twitter:image" content="https://disenouchile.github.io/seminarios/seminarios.png" />
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" />
-        <link href="style.css" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+        <link href="style.css" rel="stylesheet" />
     </head>
     <body style="background: #f5f5f5;">
-        <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
-            <symbol id="dialogo" viewBox="0 0 100 100">
-                <path
-                    d="M5.49,67.68v-21A4.62,4.62,0,0,1,10,42.09H56.65a4.14,4.14,0,0,1,4.43,4.43V47H10.41V67.68Zm0,4.92,15.86-.12-2.09,9.34,9.23-9.34H56.16V51.93h4.92V73a4.37,4.37,0,0,1-4.55,4.43H30.45L18.65,87.6H14l2.22-10.2H10A4.43,4.43,0,0,1,5.49,73ZM86.3,78.13,72.4,58.58H65.51V39.76a2.13,2.13,0,0,0-2.21-2.22H18.77V19.22a3,3,0,0,1,2.95-3H90.85a3.14,3.14,0,0,1,3.2,3V55.87a3,3,0,0,1-3.2,2.71H83.71l3.2,19.55Z"
-                ></path>
-            </symbol>
-        </svg>
-
-        <div class="container" id="central">
-            <div class="row">
-                <div class="col-11 mx-auto">
-                    <header class="mt-4 pt-3">
-                        <div class="row g-0 align-items-center">
-                            <div class="col-2 d-none d-md-inline pe-4" style="margin-left: -0.25rem;">
-                                <svg class="w-100" fill="#102b4a"><use href="#dialogo"></use></svg>
-                            </div>
-                            <div class="col-10">
-                                <h2 class="fs-3 m-0 p-0">9, 10 y 11 de diciembre, 2024</h2>
-                                <address class="fs-4 m-0 p-0"><em>HALL CENTRAL</em> — <em>FAU</em> — <em>UCH</em></address>
-                            </div>
-                        </div>
-
-                        <h1>Sesión de póster académico</h1>
-
-                        <h2>Resultados del seminario de investigación para optar al grado académico de <em>Licenciado/a en Diseño de la Universidad de Chile</em>.</h2>
-
-                        <img src="escudo.svg" id="escudo" />
-
-                        <h4 id="alternativas" class="pt-5 d-flex justify-content-between align-items-center"><span>Participantes por Jornada</span> <a class="btn btn-primary" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;" href="comisiones.html#alternativas">Ver comisiones por Profesor/a</a></h4>
-
-                    </header>
-                    <main>
-                        <select class="form-select form-select-sm ms-md-auto w-100 mb-2" id="jornadas">
-                            <option>Seleccione jornada…</option>
-                            <option value="LUNES AM">Lunes 9, de 10:00 a 12:30 hrs.</option>
-                            <option value="LUNES PM">Lunes 9, de 15:00 a 17:30 hrs.</option>
-                            <option value="MARTES AM">Martes 10, de 10:00 a 12:30 hrs.</option>
-                            <option value="MARTES PM">Martes 10, de 15:00 a 17:30 hrs.</option>
-                            <option value="MIÉRCOLES AM">Miércoles 11, de 10:00 a 12:30 hrs.</option>
-                            <option value="MIÉRCOLES PM">Miércoles 11, de 15:00 a 17:30 hrs.</option>
-                        </select>
-
-
-                        <div class="row row-cols-2 row-cols-md-3 row-cols-xxl-4 g-2" id="participantes"></div>
-
-                        <div id="comisiones" class="m-0 py-3 small text-body-secondary"></div>
-
-
-                    </main>
-
-                    <aside class="my-5 small text-body-secondary"><em>Palabras clave en las investigaciones participantes:</em> <span id="keywords" class="small fst-italic p-1"></span></aside>
-
-                    <footer class="my-5">
-                        <dl>
-                            <dt class="fs-4">Invitan</dt>
-                            <dd>
-                                <a href="https://fau.uchile.cl/diseno" title="Departamento de Diseño" target="_blank" class="link-dark">DdD</a> — FAU — Universidad de Chile<br />
-                                <a href="https://fau.uchile.cl/investigacion" title="Dirección de Investigación y Creación" target="_blank" class="link-dark">DIC</a> — FAU — Universidad de Chile
-                            </dd>
-                        </dl>
-                        <dl>
-                            <dt class="fs-4">Organizan</dt>
-                            <dd>
-                                <a href="https://fau.uchile.cl/carreras/4929/diseno" target="_blank" class="link-dark">Carrera de Diseño</a> — Escuela de Pregrado — FAU — Universidad de Chile<br />
-                                <a href="https://fau.uchile.cl/extension" title="Dirección de Extensión y Vinculación con el Medio" target="_blank" class="link-dark">DEXVM</a> — FAU — Universidad de Chile
-                            </dd>
-                        </dl>
-                        <dl>
-                            <dt class="fs-4">Colabora</dt>
-                            <dd><a href="https://www.redis.cl/" target="_blank" class="link-dark">ReDis</a> — Consejo de Rectores de las Universidades de Chilenas</dd>
-                        </dl>
-
-                        <div class="alert alert-light" style="margin: 3rem -0.2rem 0 -0.2rem;">
-                            <p class="m-0 small">
-                                Si usted pertenece a la <a href="https://www.redis.cl/index.php/quienes-somos/" target="_blank" class="link-dark">ReDis</a>: Puede inscribirse en
-                                <a href="https://docs.google.com/forms/d/e/1FAIpQLSf21gqpCbLpDh2E4apb9BzTKWtf-Zw7bHoDwmTmQtePEnzpWw/viewform?usp=sharing" class="link-dark" target="_blank">este formulario</a> para asistir a Sesión de póster
-                                académico y, también, asistir a la entrega final y abierta de <a href="https://disenouchile.github.io/proyectos/" class="link-dark">Proyectos</a>.
-                            </p>
-                        </div>
-                    </footer>
+        <div class="container p-4 border border-2 border-black" id="central">
+            <div class="row g-0 align-items-end">
+                <div class="col-2 col-md-1">
+                    <img src="escudo.svg" class="w-100" />
+                </div>
+                <div class="col-10 col-md-11">
+                    <p class="m-0 p-0 mb-2 ms-3 fw-bold">
+                        UNIVERSIDAD DE CHILE <br />
+                        FACULTAD DE ARQUITECTURA Y URBANISMO <br />
+                        DEPARTAMENTO DE DISEÑO
+                    </p>
                 </div>
             </div>
+
+            <div class="row g-0">
+                <main class="col-12">
+                    <div class="row py-2 my-4 align-items-top border-top border-bottom border-2 border-black">
+                        <div class="col"><h3>HALL CENTRAL</h3></div>
+                        <div class="col"><h3 class="text-end">14 y 15 de julio, 2025</h3></div>
+                    </div>
+
+                    <h1>Sesión de póster académico</h1>
+                    <h2>Resultados del seminario de investigación para optar al grado académico de <span>Licenciado/a en Diseño de la Universidad de Chile</span></h2>
+
+                    <div class="input-group my-4 shadow-sm">
+                        <label class="input-group-text" for="inputGroupSelect01">HORARIOS</label>
+                        <select class="form-select" id="inputGroupSelect01">
+                            <option selected>Seleccione bloque…</option>
+                            <option value="1">Lunes 14, de 15:00 a 17:50 hrs.</option>
+                            <option value="2">Martes 15, de 10:00 a 12:30 hrs.</option>
+                            <option value="3">Martes 15, de 15:00 a 17:50 hrs.</option>
+                        </select>
+                    </div>
+
+                    <div class="row row-cols-2 row-cols-md-3 g-3" id="participantes"></div>
+                </main>
+
+                <aside class="col-12 pt-4 small text-body-secondary">
+                    <p>
+                        <em>Palabras clave</em>: Accesibilidad, ACV, afiche, afiche político, alivio, amputación, ansiedad, arte, arpilleras, AuTDAH, autonomía, bienestar, biomecánica, biobasados, Cachagua, calefacción,
+                        <i>canis lupus familiaris</i>, cerámica, chino-español, coherencia, color, comunicación visual, construcción de vínculos, contaminación, contexto urbano, creatividad, cultura material, curativo, daltonismo,
+                        decoración, derechos sexuales, desplazamiento, deterioro cognitivo, dictadura, digital, discapacidad, discapacidad física, discografía física, diseño, diseño contemporáneo, diseño de experiencia, diseño de
+                        <i>packaging</i>, diseño emocional, diseño inclusivo, diseño industrial, dormitorios, edad, edición gráfica, educación de adultos, empatía, envejecimiento canino, envejecimiento humano, entorno doméstico, entorno
+                        urbano, ergonomía, escalada indoor, espacio liminal, espacio público, estética, estrategia visual, estudiantes universitarios, evolución, experiencia, fábrica, <i>fidget-tools</i>, flujo, FPS, género, historieta
+                        chilena, IKEA, imagen-mensaje, impacto, impresión 3D, inclusión, inclusión digital, identidad, industria, industria cerámica, industria musical chilena, industrialización, influencia, información, inmersión,
+                        interacciones, inteligencia artificial, juventud, jugador, kenopsia, kioscos de autoservicio, K-Pop, látex líquido, legibilidad, materiales, memoria, mensaje, metodología, moda, morfología visual, movilidad,
+                        movilidad reducida, mural, música, narrativa, narrativa sociocultural, necesidades, objeto, objetos cotidianos, ocio audiovisual, opera, ornamentación, percepción, percepción del usuario, periféricos,
+                        personalización, personas mayores, pingüinos chilenos, pobreza energética, posturas, producción, productos ultraprocesados, procesos, prótesis, realidad virtual, reconciliación, recuperación, redes sociales, región,
+                        rehabilitación, relación usuario-objeto, resistencia visual, residuos textiles, setup, sexualidad, semiótica, simplicidad, sistema musculoesquelético, soledad, sustentabilidad, tatuajes, tecnología, tecnologías
+                        asistivas, territorio, toc, trauma, Ulm, upcycling, vestuario litúrgico, vínculos, videojuegos, vivienda DFL2, visual, zonas saturadas
+                    </p>
+                    <p class="text-body-tertiary">*Primera versión <a href="2024-2/index.html" class="link-secondary" target="_blank">2024-2</a></p>
+                </aside>
+            </div>
         </div>
+
         <div class="container">
             <div class="row">
-                <div class="col-11 py-3 mx-auto small text-body-secondary fw-light">
+                <div class="col-11 py-3 mx-auto small text-body-secondary">
                     <div class="d-flex justify-content-between align-items-center">
                         <span><span class="d-none d-md-inline">Desarrollado por </span><a href="https://faco.cl" class="link-secondary" title="Felipe Alberto Cortez Orellana" target="_blank">FACO</a></span>
                         <a href="mailto:coordinacion.titulo.diseno@uchilefau.cl" class="link-secondary">coordinacion.titulo.diseno@uchilefau.cl</a>
@@ -119,74 +92,38 @@
         ></script>
 
         <script>
-            const centena = document.querySelector("#participantes");
-            const seleccion = document.querySelector("#jornadas");
-            const donde = document.querySelector("#keywords");
-            var palabrasClave = "";
+            const estudiantes = document.querySelector("#participantes");
 
-            Papa.parse("https://raw.githubusercontent.com/disenouchile/seminarios/refs/heads/main/participan.csv", {
-                download: true,
-                header: true,
-                complete: function (results) {
-                    console.log(results);
-                    results.data.forEach((d, i) => {
-                        palabrasClave = palabrasClave + d.palabras_clave + ",";
-                    });
+            async function datos(horario) {
+                var seleccion = [];
+                const consulta = await fetch("https://raw.githubusercontent.com/disenouchile/seminarios/refs/heads/main/data_2025_1.json");
+                const data = await consulta.json();
+                console.log(data);
+                data.forEach((d) => {
+                    if (d.bloque == horario) {
+                        seleccion.push(d);
+                    }
+                });
 
-                    palabrasClave = palabrasClave.split(",");
-                    palabrasClave = palabrasClave.map((e) => e.trim());
-                    palabrasClave = palabrasClave.filter((e) => e);
-                    palabrasClave = palabrasClave
-                        .reduce(
-                            (a, b) => {
-                                b.toUpperCase() === b ? a[0].push(b) : a[1].push(b);
-                                return a;
-                            },
-                            [[], []]
-                        )
-                        .flatMap((e) => e.sort((a, b) => a.localeCompare(b)));
-                    palabrasClave = [...new Set(palabrasClave)];
-                    console.log(palabrasClave);
+                seleccion.forEach((s) => {
+                    estudiantes.innerHTML += `
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <p class="p-0 m-0">${s.titulo}</p>
+                        </div>
+                        <div class="card-footer pb-3">
+                            <cite class="small"><span>${s.nombre}</span><br/><span> Prof. ${s.profe}</span></cite>
+                        </div>
+                    </div>
+                </div>`;
+                });
+            }
 
-                    palabrasClave.forEach((k, i) => {
-                        if (i !== palabrasClave.length - 1) {
-                            donde.innerHTML += `${k}, `;
-                        } else {
-                            donde.innerHTML += `${k}.`;
-                        }
-                    });
-
-                    seleccion.addEventListener("change", (e) => {
-                        window.location.hash = "alternativas";
-                        centena.innerHTML = "";
-                        var contador = 1;
-                        results.data.forEach((d, i) => {
-                            console.log(e.target.value);
-                            if (d.jornada_txt == e.target.value) {
-                                centena.innerHTML += `<div class="col jornada${d.jornada}">
-                                          <div class="card h-100 small">
-                                            <div class="card-header bg-white border-0 mt-1">
-                                                <span class="contador">${contador}</span><br>
-                                                <em>${d.nombres_seminarista[0]}. ${d.apellidos_seminarista}</em>
-                                            </div>
-                                            <div class="card-body my-0 py-0">
-                                              <p class="m-0 small"><a class="fst-italic link-dark link-underline-opacity-10 link-underline-opacity-25-hover" data-bs-toggle="collapse" href="#keywords${
-                                                  i + 1
-                                              }" role="button" aria-expanded="false" aria-controls="keywords${i + 1}">${d.nombre_investigacion}</a></p>
-                                              <div class="collapse small" id="keywords${i + 1}">
-                                              <small class="text-body-tertiary"><em>Palabras clave</em>: ${d.palabras_clave}</small>
-                                              </div>
-                                              </div>
-                                              <div class="card-footer bg-white border-0">
-                                              <small><em>${d.jornada_txt}</em><br/>${d.comision}</small>
-                                            </div>
-                                          </div>
-                                        </div>`;
-                                contador = contador + 1;
-                            }
-                        });
-                    });
-                },
+            document.querySelectorAll("select")[0].addEventListener("change", (event) => {
+                estudiantes.innerHTML = " ";
+                estudiantes.style.padding = "16px 0";
+                datos(event.target.value).catch((error) => console.error(error));
             });
         </script>
     </body>

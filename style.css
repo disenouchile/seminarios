@@ -1,136 +1,115 @@
 body {
-    font-family: "IBM Plex Sans", sans-serif;
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 300;
     color: #081626;
     padding: 1.5rem 1rem;
 }
 
-@media (min-width: 799px) {
+@media (min-width: 999px) {
     .container {
-        max-width: 800px;
+        max-width: 1000px;
     }
 }
+
+.fw-bold{
+    font-weight: 400 !important;
+    letter-spacing: 0.025rem;
+}
+
 em {
-    font-weight: bold;
+    font-weight: 500;
     font-style: normal;
 }
 
-header h1 {
-    color: #102b4a;
-    line-height: 1;
-    font-weight: 900;
-    margin: 2rem -0.2rem;
+h1{
+    font-size:calc(1.5rem + 6vw) !important;
+    font-weight: 300 !important;
+    line-height: 1 !important;
+    letter-spacing: -0.05rem;
+}
+
+
+h2{
+    font-size:calc(1.5rem + 1.5vw) !important;
+    font-weight: 200 !important;
+    line-height: 1.2 !important;
+    color:#43464a;
+    letter-spacing: -0.05rem;
+}
+
+h2 span{
     text-decoration: underline;
-    font-size: 10vw;
+    text-underline-offset: 8px;
+    text-decoration-color: #43464a;
+    text-decoration-thickness: 2px;
 }
 
-@media (orientation: landscape) {
-    header h1 {
-        font-size: calc(1rem + 5vw);
-    }
+
+h3{
+    font-size:calc(1rem + 0.75vw) !important;
+    font-weight: 400 !important;
+    line-height: 1.5 !important;
+    letter-spacing: 0.025rem;
+    margin:0;
+    padding:0;
 }
 
-header h2 {
-    color: #102b4a;
-}
 
-header address {
-    color: #102b4a;
-    letter-spacing: 0.145rem;
-}
-
-@media (orientation: portrait) {
-    header h2.fs-3 {
-        font-size: 1rem !important;
-    }
-    header address.fs-4 {
-        font-size: 0.93rem !important;
-        letter-spacing: 0.045rem;
-    }
-}
-
-header h3 em {
-    font-weight: 500;
-}
-
-h3 {
-    font-weight: bold;
-}
-
-h3 > span {
-    font-size: 75%;
-    font-weight: normal;
-}
-
-dd > a {
-    font-weight: bold;
-}
-
-select.form-select {
-    width: auto;
-}
-
-img#escudo {
-    width: calc(10vh + 5.5vw);
-    margin: 3vh 0;
-}
 
 .card {
     border-radius: 0;
-    border: none;
-    box-shadow: 0 0 3px #ddd;
+    background: #242b33;
+    color:rgba(255,255,255,.9);
+    font-size: 90%;
 }
 
-div.card-footer > small > em {
-    color: silver;
-}
-
-aside > em {
-    color: #081626;
-}
-span.contador {
-    box-shadow: inset 0 0 3px #ccc;
-    background: #eee;
-    min-width: 1.1rem;
-    padding: 0.1rem 0.2rem;
-    text-align: center;
-    display: inline-block;
-    font-size: 0.6rem;
-    margin-bottom: 0.5rem;
-    margin-left: -0.1rem;
-    color: #aaa;
-}
-
-div#perfil > div.card {
-    padding: 0.6rem 0.9rem 0.3rem 0.6rem;
-}
-
-div#perfil > div.card > p > em {
+.card-body > p{
     font-weight: 400;
-    font-style: italic !important;
+}
+
+.card-footer{
+    border:none;
+}
+
+.card-footer > cite{
+    font-weight: 500;
+    font-style: normal;
+    color:rgba(255,255,255,.75);;
+
+}
+
+.card-footer > cite span{
     text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-color:rgba(255,255,255,.5);
+    text-decoration-thickness: 1px;
+}
+
+.card-footer > cite span:first-child{
+    font-weight: 700;
+    color:rgba(255,255,255,1);
+    letter-spacing: 0.05rem;
 }
 
 #central {
-    background: #fafafa url("hall-central-ampliado.jpg") no-repeat center bottom;
+    background: #fefefe;
     background-size: 100% auto;
     padding-bottom: 5vh;
     box-shadow: 0 0 4px #ddd;
 }
 
+.input-group{
+   clear: both;
+   width:calc(100% + 0.2rem);
+   margin-left:-0.1rem; 
+   margin-right:-0.1rem;
+   border-radius: 0 !important; 
+}
 
-.btn-primary {
-    --bs-btn-color: #fff;
-    --bs-btn-bg: #1f5592;
-    --bs-btn-border-color: #163d69;
-    --bs-btn-hover-color: #fff;
-    --bs-btn-hover-bg: #163d69;
-    --bs-btn-hover-border-color: #0d253f;
-    --bs-btn-focus-shadow-rgb: 49, 132, 253;
-    --bs-btn-active-color: #fff;
-    --bs-btn-active-bg: #0d253f;
-    --bs-btn-active-border-color: #081626;
-    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-    --bs-btn-disabled-color: #fff;
-    --bs-btn-disabled-bg: #0d6efd;
-    --bs-btn-disabled-border-color: #0d6efd;
+.input-group-text{
+    border-radius: 0 !important;
+}
+
+.form-select{
+    border-radius: 0 !important;    
 }
