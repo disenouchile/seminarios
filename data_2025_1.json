@@ -130,19 +130,9 @@
         "bloque": 1
     },
     {
-        "nombre_alfabetico": "Bustos Montero, Martín Gonzalo Julián",
-        "nombre": "Martín Bustos Montero",
-        "profe": "Bruno Perelli",
-        "titulo": "La inteligencia artificial en procesos de diseño: Nuevas formas de extender la creatividad en entornos tecnológicos",
-        "lineas": "Diseño centrado en la persona | Materiales, Tecnologías y Procesos",
-        "areas": "Creación, innovación proyectual y desarrollos tecnológicos | Fenómenos sensibles, perceptuales y corporales en el entorno",
-        "keywords": "creatividad, diseño, tecnología e inteligencia artificial.",
-        "bloque": 2
-    },
-    {
         "nombre_alfabetico": "Cabezas Cáceres, Javiera Paz",
         "nombre": "Javiera Cabezas Cáceres",
-        "profe": "Jacob Bustamante",
+        "profe": "Docente J. Bustamante + Prof. F. Cortez + Prof. L. Soto + Prof.  M. Vico",
         "titulo": "¡Pánico! Coherencia de la significación en los materiales de enseñanza de chino y español: un análisis semiótico de la relación mensaje-imagen en la enseñanza de adultos",
         "lineas": "Estudios Visuales y Mediales",
         "areas": "Culturas visuales, materiales-inmateriales y mediales",
@@ -152,7 +142,7 @@
     {
         "nombre_alfabetico": "Contreras Madariaga, Millaray Carla Victoria",
         "nombre": "Millaray Contreras Madariaga",
-        "profe": "Mauricio Vico",
+        "profe": "Prof. M. Vico + Prof. F. Cortez + Prof. L. Soto",
         "titulo": "El color en el afiche político de la Unidad Popular (1970-1973) y del afiche de la resistencia en la dictadura militar (1974-1988): Un análisis comparativo",
         "lineas": "Morfología, Percepción y Color | Estudios Visuales y Mediales",
         "areas": "Culturas visuales, materiales-inmateriales y mediales",
@@ -162,7 +152,7 @@
     {
         "nombre_alfabetico": "Hernández Contreras, Paloma Valentina",
         "nombre": "Paloma Hernández Contreras",
-        "profe": "Alfredo Mora",
+        "profe": "Docente A. Mora + Prof. F. Cortez + Prof. L. Soto + Prof. A. Osorio",
         "titulo": "Estrategias visuales del K-pop: Aplicaciones y posibilidades para el diseño de álbumes físicos en la industria musical chilena.",
         "lineas": "Estudios Visuales y Mediales",
         "areas": "Culturas visuales, materiales-inmateriales y mediales",
@@ -172,7 +162,7 @@
     {
         "nombre_alfabetico": "Jarufe Fuenzalida, Samira Paz",
         "nombre": "Samira Jarufe Fuenzalida",
-        "profe": "Mauricio Vico",
+        "profe": "Prof. M. Vico + Prof. F. Cortez + Prof. L. Soto",
         "titulo": "Afiches de Ópera, Análisis estilístico de las reproducciones aparecidas de la colección de libros de \"La Gran Ópera Paso a Paso\"",
         "lineas": "Estudios Visuales y Mediales",
         "areas": "Conservación e intervención de obras, entornos y ciudades patrimoniales | Culturas visuales, materiales-inmateriales y mediales",
@@ -182,7 +172,7 @@
     {
         "nombre_alfabetico": "Manriquez Leon, Carla Alexandra",
         "nombre": "Carla Manríquez León",
-        "profe": "Pablo Domínguez",
+        "profe": "Prof. P. Domínguez + Prof. F. Maldonado + Prof. M. Vielma",
         "titulo": "Construcción de vínculos con la ciudad a través de experiencias urbanas infantiles",
         "lineas": "Diseño centrado en la persona | Identidad y Patrimonio",
         "areas": "Asentamientos, movilidades y orgánicas comunitarias | Dinámicas y transformaciones morfológicas, urbanas y rurales | Fenómenos sensibles, perceptuales y corporales en el entorno",
@@ -192,7 +182,7 @@
     {
         "nombre_alfabetico": "Olivares Frois, Isidora Paz",
         "nombre": "Isidora Olivares Frois",
-        "profe": "Sergio Donoso",
+        "profe": "Prof. S. Donoso + Prof. P. Domínguez + Prof. M. Vico",
         "titulo": "La influencia ULM en la génesis del Diseño Chileno sobre las Metodologías Académicas Contemporáneas",
         "lineas": "Identidad y Patrimonio",
         "areas": "Creación, innovación proyectual y desarrollos tecnológicos",
@@ -202,7 +192,7 @@
     {
         "nombre_alfabetico": "Poblete Santibáñez, Ignacio Andrés",
         "nombre": "Ignacio Poblete Santibáñez",
-        "profe": "Lorna Lares",
+        "profe": "Prof. L. Lares + Prof. P. Domínguez + Prof. M. Vielma",
         "titulo": "[Estudiante no responde al cuestionario; se asigna al bloque por espacio disponible]",
         "lineas": "Desconocidas",
         "areas": "Desconocidas",
@@ -212,7 +202,7 @@
     {
         "nombre_alfabetico": "Rodríguez Reyes, Sophia Ignacia",
         "nombre": "Sophia Rodríguez Reyes",
-        "profe": "Paola De la Sotta",
+        "profe": "Prof. P. de La Sotta + Prof. F. Cortez + Prof. A. Osorio",
         "titulo": "Des-ornamentación: Análisis de la evolución de los tatuajes ancestrales a contemporáneos.",
         "lineas": "Identidad y Patrimonio",
         "areas": "Asentamientos, movilidades y orgánicas comunitarias | Culturas visuales, materiales-inmateriales y mediales | Fenómenos sensibles, perceptuales y corporales en el entorno",
@@ -222,7 +212,7 @@
     {
         "nombre_alfabetico": "Simunovic Toledo, Laura Antonia",
         "nombre": "Laura Simunovic Toledo",
-        "profe": "Felipe Cortez",
+        "profe": "Prof. F. Cortez + Prof. P. Dominguez + Prof. M. Vielma",
         "titulo": "Región a capital y Tecnologías (asistivas) en estudiantes AuTDAH: Una exploración y análisis cualitativo de los usos que dan estudiantes universitarios de región autistas, con TDAH u ambos para solventar necesidades cotidianas y académicas.",
         "lineas": "Diseño centrado en la persona | Materiales, Tecnologías y Procesos | Identidad y Patrimonio",
         "areas": "Fenómenos sensibles, perceptuales y corporales en el entorno",
@@ -232,7 +222,7 @@
     {
         "nombre_alfabetico": "Valdivia Acevedo, Consuelo Del Pilar",
         "nombre": "Consuelo Valdivia Acevedo",
-        "profe": "Jacob Bustamante",
+        "profe": "Docente J. Bustamante + Prof. F. Cortez + Prof. L. Soto + Prof. M. Vico ",
         "titulo": "Análisis visual del diseño del packaging y su coherencia con la composición de ingredientes en barras alimenticias del mercado chileno (2025)",
         "lineas": "Morfología, Percepción y Color | Estudios Visuales y Mediales",
         "areas": "Culturas visuales, materiales-inmateriales y mediales | Fenómenos sensibles, perceptuales y corporales en el entorno",
@@ -242,7 +232,7 @@
     {
         "nombre_alfabetico": "Zacconi Méndez, Brandon Andrés",
         "nombre": "Brandon Zacconi Méndez",
-        "profe": "Bruno Rossi",
+        "profe": "Instructor B. Rossi + Prof. F. Maldonado + Prof. F. Cortez + Prof. A. Osorio",
         "titulo": "Realidad Virtual en Diseño de escenarios virtuales que evoquen sensación de kenopsia",
         "lineas": "Diseño centrado en la persona | Morfología, Percepción y Color | Estudios Visuales y Mediales",
         "areas": "Creación, innovación proyectual y desarrollos tecnológicos | Culturas visuales, materiales-inmateriales y mediales | Fenómenos sensibles, perceptuales y corporales en el entorno",
@@ -250,9 +240,19 @@
         "bloque": 2
     },
     {
+        "nombre_alfabetico": "Bustos Montero, Martín Gonzalo Julián",
+        "nombre": "Martín Bustos Montero",
+        "profe": "Prof. B. Perelli + Prof. H. Stange + Prof. F. Cortez",
+        "titulo": "La inteligencia artificial en procesos de diseño: Nuevas formas de extender la creatividad en entornos tecnológicos",
+        "lineas": "Diseño centrado en la persona | Materiales, Tecnologías y Procesos",
+        "areas": "Creación, innovación proyectual y desarrollos tecnológicos | Fenómenos sensibles, perceptuales y corporales en el entorno",
+        "keywords": "creatividad, diseño, tecnología e inteligencia artificial.",
+        "bloque": 3
+    },
+    {
         "nombre_alfabetico": "Cañete Cerda, Maximiliano Andrés",
         "nombre": "Maximiliano Cañete Cerda",
-        "profe": "Paola De la Sotta",
+        "profe": "Prof. P. de la Sotta + Prof. A. Osorio + Prof. P. Domínguez",
         "titulo": "Requerimientos corporales y contextuales para la actividad de escalada en rocódromo: Bases para una prótesis especializada de pie y pierna.",
         "lineas": "Diseño centrado en la persona | Materiales, Tecnologías y Procesos | Morfología, Percepción y Color",
         "areas": "Creación, innovación proyectual y desarrollos tecnológicos | Fenómenos sensibles, perceptuales y corporales en el entorno",
@@ -262,7 +262,7 @@
     {
         "nombre_alfabetico": "Echeverría Medel, Lucas Rodrigo",
         "nombre": "Lucas Echeverría Medel",
-        "profe": "Hans Stange",
+        "profe": "Prof. H. Stange + Prof. B. Perelli + Prof. F. Cortez",
         "titulo": "El papel de los motores gráficos en la inmersión en los videojuegos",
         "lineas": "Diseño centrado en la persona | Morfología, Percepción y Color | Estudios Visuales y Mediales",
         "areas": "Creación, innovación proyectual y desarrollos tecnológicos | Culturas visuales, materiales-inmateriales y mediales | Fenómenos sensibles, perceptuales y corporales en el entorno",
@@ -272,7 +272,7 @@
     {
         "nombre_alfabetico": "Escalona Navea, Arlett Yanira",
         "nombre": "Arlett Escalona Navea",
-        "profe": "René Perea",
+        "profe": "Prof. R. Perea + Prof. P. Domínguez + Prof. M. Vielma",
         "titulo": "Movilidad y envejecimiento canino: un estudio de necesidades y oportunidades",
         "lineas": "Diseño centrado en la persona | Materiales, Tecnologías y Procesos",
         "areas": "Sistemas físicos, naturales y cambios ambientales | Creación, innovación proyectual y desarrollos tecnológicos | Fenómenos sensibles, perceptuales y corporales en el entorno",
@@ -282,7 +282,7 @@
     {
         "nombre_alfabetico": "Esparza Arenas, Constanza Catalina",
         "nombre": "Constanza Esparza Arenas",
-        "profe": "Roberto Osses",
+        "profe": "Prof. R. Osses + Prof. F. Cortez + Prof. H. Stange",
         "titulo": "Donde habita la forma: Exploración morfológica y sistematización visual de las especies de pingüinos presentes en el territorio chileno",
         "lineas": "Morfología, Percepción y Color | Identidad y Patrimonio | Diseño Editorial y Tipografía",
         "areas": "Creación, innovación proyectual y desarrollos tecnológicos | Culturas visuales, materiales-inmateriales y mediales | Fenómenos sensibles, perceptuales y corporales en el entorno",
@@ -292,7 +292,7 @@
     {
         "nombre_alfabetico": "Jeria Yáñez, Maite Sofía",
         "nombre": "Maite Jeria Yáñez",
-        "profe": "Pablo Domínguez",
+        "profe": "Prof. P. Domínguez + Prof. R. Silva + Prof. M. Vielma",
         "titulo": "Análisis de métodos para el desarrollo de una prótesis en los Canis lupus familiaris.",
         "lineas": "Materiales, Tecnologías y Procesos",
         "areas": "Creación, innovación proyectual y desarrollos tecnológicos",
@@ -302,7 +302,7 @@
     {
         "nombre_alfabetico": "Julia Donoso, Catalina Ignacia",
         "nombre": "Catalina Juliá Donoso",
-        "profe": "Pamela Gatica",
+        "profe": "Prof. P. Gatica + Prof. R. Silva + Prof. B. Perelli",
         "titulo": "Inscripciones en piel :  El tatuaje como experiencia y como expresión emocional en la construcción de identidad",
         "lineas": "Diseño centrado en la persona | Estudios Visuales y Mediales",
         "areas": "Culturas visuales, materiales-inmateriales y mediales",
@@ -312,7 +312,7 @@
     {
         "nombre_alfabetico": "Madrid Farfán, Montserrat Fernanda",
         "nombre": "Montserrat Madrid Farfán",
-        "profe": "Mitzi Vielma",
+        "profe": "Prof. M. Vielma + Prof. R. Silva + Prof. P. Domínguez",
         "titulo": "La resignificación simbólica del espacio público: deportes urbanos en Santiago de Chile",
         "lineas": "Desconocidas",
         "areas": "Desconocidas",
@@ -322,7 +322,7 @@
     {
         "nombre_alfabetico": "Morales Soto, Alisson Lissette",
         "nombre": "Alisson Morales Soto",
-        "profe": "Rebeca Silva",
+        "profe": "Prof. R. Silva + Prof. P. Domínguez + Prof. M. Vielma",
         "titulo": "Cuerpos, cuidados y espacio público: Diseñando la experiencia de la movilidad del cuidado en la ciudad",
         "lineas": "Diseño centrado en la persona | Identidad y Patrimonio",
         "areas": "Asentamientos, movilidades y orgánicas comunitarias | Dinámicas y transformaciones morfológicas, urbanas y rurales | Fenómenos sensibles, perceptuales y corporales en el entorno",
@@ -332,7 +332,7 @@
     {
         "nombre_alfabetico": "Núñez Galindo, Alondra Alenguei",
         "nombre": "Alondra Núñez Galindo",
-        "profe": "Rebeca Silva",
+        "profe": "Prof. R. Silva + Prof. P. Domínguez + Prof. M. Vielma",
         "titulo": "Kioskos de autoservicio y adultos mayores: Un desafío en la inclusión digital de las personas mayores",
         "lineas": "Diseño centrado en la persona",
         "areas": "Fenómenos sensibles, perceptuales y corporales en el entorno",
@@ -342,7 +342,7 @@
     {
         "nombre_alfabetico": "Ochoa Martínez, Valentina Ignacia",
         "nombre": "Valentina Ochoa Martínez",
-        "profe": "Pamela Gatica",
+        "profe": "Prof. P. Gatica + Prof. R. Silva + Prof. H. Stange",
         "titulo": "Bordando la memoria colectiva: El trauma como condicionante para el activismo de mujeres",
         "lineas": "Diseño centrado en la persona | Estudios Visuales y Mediales",
         "areas": "Culturas visuales, materiales-inmateriales y mediales | Fenómenos sensibles, perceptuales y corporales en el entorno",
@@ -352,7 +352,7 @@
     {
         "nombre_alfabetico": "Ramos Yáñez, Magdalena Lucía",
         "nombre": "Magdalena Ramos Yañez",
-        "profe": "René Perea",
+        "profe": "Prof. R. Perea + Prof. P. Gatica + Prof. M. Cattan",
         "titulo": "Personalización de indumentaria como herramienta de búsqueda identitaria dentro de la generación Z",
         "lineas": "Diseño centrado en la persona | Materiales, Tecnologías y Procesos",
         "areas": "Creación, innovación proyectual y desarrollos tecnológicos | Culturas visuales, materiales-inmateriales y mediales",
@@ -362,7 +362,7 @@
     {
         "nombre_alfabetico": "Sepúlveda Infante, Sigrid Noelia",
         "nombre": "Sigrid Sepúlveda Infante",
-        "profe": "Pamela Gatica",
+        "profe": "Prof. P. Gatica + Prof. R. Osses + Prof. H. Stange",
         "titulo": "La moda como una narrativa sociocultural Análisis de las ediciones de moda de la revista YA Colección (2019-2022)",
         "lineas": "Identidad y Patrimonio | Estudios Visuales y Mediales | Diseño Editorial y Tipografía",
         "areas": "Culturas visuales, materiales-inmateriales y mediales | Fenómenos sensibles, perceptuales y corporales en el entorno",
@@ -372,7 +372,7 @@
     {
         "nombre_alfabetico": "Vásquez Agüero, Antonia Javiera",
         "nombre": "Antonia Vásquez Agüero",
-        "profe": "Mitzi Vielma",
+        "profe": "Prof. M. Vielma + Prof. P. Gatica + Prof. M. Cattan",
         "titulo": "Vestuario litúrgico y subcultura gótica: análisis simbólico desde el diseño industrial",
         "lineas": "Diseño centrado en la persona | Morfología, Percepción y Color | Identidad y Patrimonio | Estudios Visuales y Mediales",
         "areas": "Culturas visuales, materiales-inmateriales y mediales | Fenómenos sensibles, perceptuales y corporales en el entorno",
